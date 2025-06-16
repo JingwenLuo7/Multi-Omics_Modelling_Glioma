@@ -1,0 +1,300 @@
+---
+title: "TCGA_EDA_samples"
+author: "luojingwen"
+date: "2025-06-14"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    extra_dependencies: ["ctex"]
+header-includes:
+  - \usepackage{ctex}
+lang: en
+editor_options: 
+  chunk_output_type: inline
+---
+
+#library
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+rm(list=ls())
+options(stringsAsFactors = F)
+library(TCGAbiolinks)
+library(SummarizedExperiment )
+library(data.table)
+library(dplyr)
+library(stringr)
+library(VennDiagram)
+library(UpSetR)
+library(gridExtra)
+library(ggplot2)
+library(RColorBrewer)
+```
+
+## clinical
+```{r}
+## dim(302,81)
+clinical_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM.clinical.tsv.gz"), sep = "\t", header = TRUE, row.names = 1)
+
+
+## dim(534,80)
+clinical_LGG <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-LGG.clinical.tsv.gz"), sep = "\t", header = TRUE, row.names = 1)
+```
+
+
+## SNV
+```{r}
+snv_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM.somaticmutation_wxs.tsv.gz"), sep = "\t", header = TRUE)
+
+snv_LGG <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-LGG.somaticmutation_wxs.tsv.gz"), sep = "\t", header = TRUE)
+
+#snv_GBM %>% group_by(sample) %>% summarise(snv = n()) %>% write.table("../data/samples/TCGA-GBM_snv_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+#snv_LGG %>% group_by(sample) %>% summarise(snv = n()) %>% write.table("../data/samples/TCGA-LGG_snv_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+snv_GBM %>% group_by(sample) %>% summarise(snv = n()) %>% 
+  ggplot( aes(x = snv)) + geom_histogram(binwidth = 5, fill = "lightblue", colour = "black")+ggtitle("SNV sample distribution in GBM")
+
+snv_LGG %>% group_by(sample) %>% summarise(snv = n()) %>% ggplot( aes(x = snv)) +
+    geom_histogram(binwidth = 5, fill = "lightblue", colour = "black")+
+    ggtitle("SNV sample distribution in LGG")
+
+
+snv_GBM %>% group_by(sample) %>% summarise(snv = n()) %>% mutate(type = "GBM") %>% 
+  rbind(snv_LGG %>% group_by(sample) %>% summarise(snv = n()) %>% mutate(type = "LGG")) %>%
+  ggplot(aes(x = type, y = snv, fill = factor(type))) + 
+  geom_boxplot() + 
+  scale_y_continuous(
+    trans = "log10",
+    breaks = c(1, 10, 100, 1000, 10000)) +
+  scale_fill_brewer(palette = "Pastel2") +
+  ggtitle("SNV records counts in GBM/LGG")+
+  labs(y = "SNV count (log scale)", fill = "Type")+theme_minimal()
+```
+
+
+## CNV
+```{r}
+cnv_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM.gene-level_absolute.tsv.gz"), sep = "\t", header = TRUE)
+
+cnv_LGG <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-LGG.gene-level_absolute.tsv.gz"), sep = "\t", header = TRUE)
+
+records_cnv_GBM <- data.frame(
+  sample = colnames(cnv_GBM[, -1, drop = FALSE]),
+  cnv = apply(cnv_GBM[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
+)
+
+records_cnv_LGG <- data.frame(
+  sample = colnames(cnv_LGG[, -1, drop = FALSE]),
+  cnv = apply(cnv_LGG[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
+)
+
+#records_cnv_GBM %>% write.table("../data/samples/TCGA-GBM_cnv_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+#records_cnv_LGG %>% write.table("../data/samples/TCGA-LGG_cnv_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+records_cnv_GBM %>% mutate(type = "GBM") %>% 
+  rbind(records_cnv_LGG %>% mutate(type = "LGG")) %>%
+  ggplot(aes(x = type, y = cnv, fill = factor(type))) + 
+  geom_boxplot() + 
+  scale_fill_brewer(palette = "Pastel2") +
+  ggtitle("CNV counts(No NA) in GBM/LGG")+
+  labs(y = "CNV count", fill = "Type")+theme_minimal()
+```
+
+## mRNA
+```{r}
+mRNAseq_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM.star_counts.tsv.gz"), sep = "\t", header = TRUE)
+
+mRNAseq_LGG <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-LGG.star_counts.tsv.gz"), sep = "\t", header = TRUE)
+
+records_mRNAseq_GBM <- data.frame(
+  sample = colnames(mRNAseq_GBM[, -1, drop = FALSE]),
+  mRNA_records_num = apply(mRNAseq_GBM[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
+)
+
+records_mRNAseq_LGG <- data.frame(
+  sample = colnames(mRNAseq_LGG[, -1, drop = FALSE]),
+  mRNA_records_num = apply(mRNAseq_LGG[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
+)
+
+#records_mRNAseq_GBM %>% write.table("../data/samples/TCGA-GBM_mRNAseq_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+#records_mRNAseq_LGG %>% write.table("../data/samples/TCGA-LGG_mRNAseq_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+```
+
+## Methylation 
+```{r}
+methy270_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM.methylation27.tsv.gz"), sep = "\t", header = TRUE)
+
+methy450_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM.methylation450.tsv.gz"), sep = "\t", header = TRUE)
+
+methy450_LGG <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-LGG.methylation450.tsv.gz"), sep = "\t", header = TRUE)
+
+records_methy270_GBM <- data.frame(
+  sample = colnames(methy270_GBM[, -1, drop = FALSE]),
+  probe = apply(methy270_GBM[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
+)
+records_methy450_GBM <- data.frame(
+  sample = colnames(methy450_GBM[, -1, drop = FALSE]),
+  probe = apply(methy450_GBM[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
+)
+records_methy450_LGG <- data.frame(
+  sample = colnames(methy450_LGG[, -1, drop = FALSE]),
+  probe = apply(methy450_LGG[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
+)
+
+#records_methy270_GBM %>% write.table("../data/samples/TCGA-GBM_methy270_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+#records_methy450_GBM %>% write.table("../data/samples/TCGA-GBM_methy450_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+records_methy450_LGG %>% write.table("../data/samples/TCGA-LGG_methy450_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+```
+
+### GBM 270k vs 450k overlap
+```{r}
+set1 <- records_methy270_GBM$sample 
+set2 <- records_methy450_GBM$sample 
+
+myCol <- c("#B3E2CD","#FDCDAC")#brewer.pal(2, "Pastel2")
+
+# Chart
+venn_methyl_GBM <- venn.diagram(
+        x = list(set1, set2),
+        
+        # Circels
+        lwd = 2,lty = 'blank',fill = myCol,
+        
+        # Values
+        cex = .6,fontface = "bold",fontfamily = "sans",
+        
+        # Labels
+        category.names = c("Samples(270K)" , "Samples(450K)"),
+        cat.cex = 0.6,cat.fontface = "bold",cat.default.pos = "outer",
+        cat.pos = c(0,0),
+        cat.dist = 0.05,
+        #cat.fontfamily = "sans",rotation = 1,
+        
+        output=TRUE, 
+        filename = '../data/samples/venn_GBM_270kvs450k.png',
+        imagetype="png" ,height = 800 , width = 800 , resolution = 300
+)
+
+```
+
+## protein
+```{r}
+protein_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM.protein.tsv.gz"), sep = "\t", header = TRUE)
+
+protein_LGG <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-LGG.protein.tsv.gz"), sep = "\t", header = TRUE)
+
+records_protein_GBM <- data.frame(
+  sample = colnames(protein_GBM[, -1, drop = FALSE]),
+  protein_num = apply(protein_GBM[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
+)
+
+records_protein_LGG <- data.frame(
+  sample = colnames(protein_LGG[, -1, drop = FALSE]),
+  protein_num = apply(protein_LGG[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
+)
+
+#records_protein_GBM %>% write.table("../data/samples/TCGA-GBM_protein_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+#records_protein_LGG %>% write.table("../data/samples/TCGA-LGG_protein_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+```
+
+
+## Samples Overlap in omics layer
+
+```{r}
+GBM_list <- list(
+  snv = "../data/samples/TCGA-GBM_snv_samples.csv",
+  cnv = "../data/samples/TCGA-GBM_cnv_samples.csv",
+  mRNAseq = "../data/samples/TCGA-GBM_mRNAseq_samples.csv",
+  methy270 = "../data/samples/TCGA-GBM_methy270_samples.csv",
+  methy450 = "../data/samples/TCGA-GBM_methy450_samples.csv",
+  protein = "../data/samples/TCGA-GBM_protein_samples.csv"
+)
+
+GBM_list_merged <- list(
+  snv = "../data/samples/TCGA-GBM_snv_samples.csv",
+  cnv = "../data/samples/TCGA-GBM_cnv_samples.csv",
+  mRNAseq = "../data/samples/TCGA-GBM_mRNAseq_samples.csv",
+  methy = c("../data/samples/TCGA-GBM_methy270_samples.csv", 
+            "../data/samples/TCGA-GBM_methy450_samples.csv"), 
+  protein = "../data/samples/TCGA-GBM_protein_samples.csv"
+)
+
+LGG_list <- list(
+  snv = "../data/samples/TCGA-LGG_snv_samples.csv",
+  cnv = "../data/samples/TCGA-LGG_cnv_samples.csv",
+  mRNAseq = "../data/samples/TCGA-LGG_mRNAseq_samples.csv",
+  protein = "../data/samples/TCGA-LGG_protein_samples.csv"
+)
+
+read_samples <- function(file_paths) {
+  if(length(file_paths) == 1) {
+    samples <- read.delim(file_paths, sep = "\t")[, 1]
+    return(gsub("\\.", "-", samples))
+  }
+  all_samples <- c()
+  for(file_path in file_paths) {
+    samples <- read.delim(file_path, sep = "\t")[, 1]
+    all_samples <- c(all_samples, gsub("\\.", "-", samples))
+  }
+  return(unique(all_samples))
+}
+
+
+create_sample_matrix <- function(file_list) {
+  all_samples <- unique(unlist(lapply(file_list, read_samples)))
+
+  sample_matrix <- matrix(0, 
+                         nrow = length(all_samples), 
+                         ncol = length(file_list),
+                         dimnames = list(all_samples, names(file_list)))
+  for (i in seq_along(file_list)) {
+    samples <- read_samples(file_list[[i]])
+    existing_samples <- intersect(samples, rownames(sample_matrix))
+    sample_matrix[existing_samples, i] <- 1
+  }
+  
+  return(as.data.frame(sample_matrix))
+}
+
+gbm_matrix <- create_sample_matrix(GBM_list)
+gbm_matrix_merged <- create_sample_matrix(GBM_list_merged)
+lgg_matrix <- create_sample_matrix(LGG_list)
+
+create_upset <- function(matrix_data, title, color) {
+  upset(matrix_data,
+        nsets = ncol(matrix_data),
+        sets = colnames(matrix_data),
+        mainbar.y.label = "Sample Intersections",
+        sets.x.label = "Samples per Data Type",
+        main.bar.color = color,
+        sets.bar.color = adjustcolor(color, alpha.f = 0.6),
+        order.by = 'freq',
+        text.scale = c(1.5, 1.5, 1.5, 1.2, 1.5, 1.5),
+        set_size.scale_max = max(colSums(matrix_data)) * 1.3,
+        set_size.show = TRUE)
+}
+
+# 创建图形对象（不打印）
+gbm_plot <- create_upset(gbm_matrix, "GBM Sample Coverage", "darkblue")
+gbm_plot_merged <- create_upset(gbm_matrix_merged, "GBM Merged Sample Coverage", "darkblue")
+lgg_plot <- create_upset(lgg_matrix, "LGG Sample Coverage", "darkred")
+
+pdf("../data/samples/Combined_UpSet_Plots.pdf", width = 8, height = 6)
+print(gbm_plot)
+print(gbm_plot_merged)
+print(lgg_plot)
+dev.off()
+```
+
+## References
+
+- https://xenabrowser.net/datapages/?cohort=GDC%20TCGA%20Glioblastoma%20(GBM)&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443
+
+- https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/sample-type-codes
