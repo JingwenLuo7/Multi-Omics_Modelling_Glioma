@@ -1,0 +1,237 @@
+---
+title: "TCGA_preprocess_methylation"
+author: "luojingwen"
+date: "2025-06-19"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    extra_dependencies: ["ctex"]
+header-includes:
+  - \usepackage{ctex}
+lang: en
+editor_options: 
+  chunk_output_type: inline
+---
+
+#library
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+rm(list=ls())
+options(stringsAsFactors = F)
+
+library(data.table)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(VennDiagram)
+#BiocManager::install("ChAMP")
+#library(ChAMP)
+library(gridExtra)
+library(ggplot2)
+library(RColorBrewer)
+
+```
+
+## load data
+```{r}
+meth270 <- fread("../data/omics_Xena_GDC_TCGA/TCGA-GBM.methylation270.tsv.gz") %>% as.data.frame()
+meth450 <- fread("../data/omics_Xena_GDC_TCGA/TCGA-GBM.methylation450.filtered.tsv.gz") %>% as.data.frame()
+rownames(meth270) <- meth270[[1]]
+meth270 <- meth270[, -1]
+rownames(meth450) <- meth450[[1]]
+meth450 <- meth450[, -1]
+
+meth_LGG <- fread("../data/omics_Xena_GDC_TCGA/TCGA-LGG.methylation450.filtered.tsv.gz") %>% as.data.frame()
+rownames(meth_LGG) <- meth_LGG[[1]]
+meth_LGG <- meth_LGG[, -1]
+
+# read manifest 
+manifest <- fread("../data/omics_Xena_GDC_TCGA/HM450.hg38.manifest.gencode.v36.PROBEMAP", header = TRUE, data.table = FALSE)
+colnames(manifest) <- c("id", "gene", "chrom", "start", "end", "strand")
+# snp file
+snp_probe <- fread("../data/omics_Xena_GDC_TCGA/HM450.hg38.snp.tsv.gz") %>% as.data.frame()
+
+outpath="../data/omics_Xena_GDC_TCGA/"
+```
+
+
+## QC
+```{r}
+# 1. remove probe with missing value > 50% samples 
+meth270 <- meth270[rowMeans(is.na(meth270)) < 0.5, ]
+meth450 <- meth450[rowMeans(is.na(meth450)) < 0.5, ]
+meth_LGG <- meth_LGG[rowMeans(is.na(meth_LGG)) < 0.5, ]
+
+# 2. remove probe from chrX, chrY probe
+manifest <- manifest[!manifest$chrom %in% c("chrX", "chrY"), ]
+
+# 3. remove probe related to snp
+filter_snp_probes <- function(meth_df, snp_file) {
+  snp_probes <- unique(snp_file[[1]])
+  
+  n_before <- nrow(meth_df)
+  meth_filtered <- meth_df[!rownames(meth_df) %in% snp_probes, ]
+  n_after <- nrow(meth_filtered)
+  
+  cat(sprintf("Removed %d SNP-related probes (%d -> %d rows).\n",
+              n_before - n_after, n_before, n_after))
+  return(meth_filtered)
+}
+meth270_filtered <- filter_snp_probes(meth_df =  meth270,snp_file = snp_probe)
+meth450_filtered <- filter_snp_probes(meth_df =  meth450,snp_file = snp_probe)
+meth_LGG_filtered <- filter_snp_probes(meth_df =  meth_LGG,snp_file = snp_probe)
+```
+
+## check probes overlap
+```{r}
+set1 <- rownames(meth270_filtered)
+set2 <- rownames(meth450_filtered)
+set3 <- rownames(meth_LGG_filtered)
+
+venn.plot <- venn.diagram(
+  x = list( "270K" = set1,"450K" = set2,"LGG" = set3),
+  filename = paste0(outpath,"Probes_venn_plot.png"),
+  imagetype = "png",
+  fill = c("cornflowerblue", "darkorange","lightyellow"),
+  alpha = 0.5,
+  cex = 1.5,
+  cat.cex = 1.3,
+  cat.pos = c(-20, 20, 60),
+  cat.dist = c(0.05, 0.05, -0.45),
+  main = "Venn Diagram of Probes"
+)
+
+```
+
+## probe-to-gene
+```{r}
+# keep overlap probe
+all_probes <- union(rownames(meth270_filtered), rownames(meth450_filtered))
+manifest <- manifest[manifest$id %in% all_probes, ]
+
+# map probe-to-gene 
+manifest$gene <- gsub(";", ",", manifest$gene)
+probe_gene_df <- manifest %>%
+  select(id, gene) %>%
+  mutate(gene = strsplit(gene, ",")) %>%
+  unnest(gene) %>%
+  mutate(gene = str_trim(gene)) %>%
+  filter(gene != "") %>%
+  distinct()
+```
+
+## methylation level for genes
+```{r}
+# function: calculate methylation level for genes
+get_gene_meth <- function(meth_matrix, probe_gene_df) {
+  gene_to_probes <- split(probe_gene_df$id, probe_gene_df$gene)
+  gene_meth <- sapply(gene_to_probes, function(probes) {
+    valid_probes <- intersect(probes, rownames(meth_matrix))
+    if (length(valid_probes) == 0) return(rep(NA, ncol(meth_matrix)))
+    colMeans(meth_matrix[valid_probes, , drop = FALSE], na.rm = TRUE)
+  })
+  gene_meth <- t(gene_meth)
+  rownames(gene_meth) <- names(gene_to_probes)
+  as.data.frame(gene_meth)
+}
+
+gene_meth270 <- get_gene_meth(meth270_filtered, probe_gene_df)
+gene_meth450 <- get_gene_meth(meth450_filtered, probe_gene_df)
+gene_methLGG <- get_gene_meth(meth_LGG_filtered, probe_gene_df)
+
+
+# remove genes with missing value > 50% samples 
+gene_meth270_filtered <- gene_meth270[rowMeans(is.na(gene_meth270)) < 0.5, ]
+gene_meth450_filtered <- gene_meth450[rowMeans(is.na(gene_meth450)) < 0.5, ]
+gene_methLGG_filtered <- gene_methLGG[rowMeans(is.na(gene_methLGG)) < 0.5, ]
+
+```
+
+## check genes overlap
+```{r}
+set1 <- rownames(gene_meth270_filtered)
+set2 <- rownames(gene_meth450_filtered)
+set3 <- rownames(gene_methLGG_filtered)
+
+venn.plot <- venn.diagram(
+  x = list( "270K" = set1,"450K" = set2,"LGG" = set3),
+  filename = paste0(outpath,"Methy_genes_venn_plot.png"),
+  imagetype = "png",
+  fill = c("cornflowerblue", "darkorange","lightyellow"),
+  alpha = 0.5,
+  cex = 1.5,
+  cat.cex = 1.3,
+  cat.pos = c(-20, 20, 0),
+  cat.dist = c(0.05, 0.05, 0.05),
+  main = "Venn Diagram of Genes"
+)
+
+```
+
+
+## check batch for GBM
+```{r}
+# merge matrix
+common_genes <- intersect(rownames(gene_meth270), rownames(gene_meth450))
+gene_meth270_common <- gene_meth270[common_genes, ]
+gene_meth450_common <- gene_meth450[common_genes, ]
+gene_meth_all <- cbind(gene_meth270_common, gene_meth450_common)
+
+# batch label
+batch <- c(rep("270K", ncol(gene_meth270_common)),
+           rep("450K", ncol(gene_meth450_common)))
+names(batch) <- colnames(gene_meth_all)
+
+# transpose to sample - gene）
+meth_t <- t(gene_meth_all)
+col_means <- colMeans(meth_t, na.rm = TRUE)
+na_index <- is.na(meth_t)
+meth_t[na_index] <- col_means[col(meth_t)[na_index]]
+
+# PCA
+pca_res <- prcomp(meth_t, center = TRUE, scale. = TRUE)
+pca_df <- data.frame(PC1 = pca_res$x[,1],
+                     PC2 = pca_res$x[,2],
+                     batch = batch[rownames(pca_res$x)])
+
+p_before <- ggplot(pca_df, aes(x = PC1, y = PC2, color = batch)) +
+  geom_point(size = 3) +
+  theme_minimal() +
+  labs(title = "PCA of Gene-level Methylation (270K vs 450K)",
+       x = "PC1", y = "PC2")
+p_before
+
+ggsave(paste0(outpath,"pca_methylation_batch_before.png"), plot = p_before, width = 6, height = 5, dpi = 300)
+```
+## Batch Effect Correction 
+```{r}
+library(sva)
+modcombat <- model.matrix(~1, data = data.frame(batch = batch))
+meth_corrected <- ComBat(dat = t(meth_t), batch = batch, mod = modcombat,par.prior = TRUE, prior.plots = FALSE)
+
+meth_corrected_t <- t(meth_corrected)
+pca_res2 <- prcomp(meth_corrected_t, center = TRUE, scale. = TRUE)
+pca_df2 <- data.frame(PC1 = pca_res2$x[, 1],
+                      PC2 = pca_res2$x[, 2],
+                      batch = batch[rownames(pca_res2$x)])
+
+p_after <- ggplot(pca_df2, aes(x = PC1, y = PC2, color = batch)) +
+  geom_point(size = 3) +
+  theme_minimal() +
+  labs(title = "PCA After ComBat Batch Correction",
+       x = "PC1", y = "PC2")
+p_after
+
+ggsave(paste0(outpath,"pca_methylation_batch_corrected.png"), plot = p_after, width = 6, height = 5, dpi = 300)
+```
+
+## save OUTPUT
+```{r}
+t(meth_corrected_t) %>% write.table(paste0(outpath,"TCGA_GBM_gene_level_methylation.tsv"),sep="\t",col.names = T,row.names =T,quote = F)
+
+gene_methLGG_filtered %>% write.table(paste0(outpath,"TCGA_LGG_gene_level_methylation.tsv"),sep="\t",col.names = T,row.names =T,quote = F)
+```
+
+## References
+
+- https://zwdzwd.github.io/InfiniumAnnotation

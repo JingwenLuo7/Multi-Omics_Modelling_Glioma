@@ -103,14 +103,16 @@ records_cnv_GBM %>% mutate(type = "GBM") %>%
 
 ## mRNA
 ```{r}
-mRNAseq_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM.star_counts.tsv.gz"), sep = "\t", header = TRUE)
+#mRNAseq_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM_mRNA.csv"), sep = ",", header = TRUE)
+mRNA_array_GBM <- read.table("../data/omics_Xena_GDC_TCGA/TCGA_GBM_microarray.csv", sep = ",", header = TRUE)
+mRNAseq_LGG <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-LGG_mRNA.csv"), sep = ",", header = TRUE)
 
-mRNAseq_LGG <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-LGG.star_counts.tsv.gz"), sep = "\t", header = TRUE)
-
-records_mRNAseq_GBM <- data.frame(
-  sample = colnames(mRNAseq_GBM[, -1, drop = FALSE]),
-  mRNA_records_num = apply(mRNAseq_GBM[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
+records_mRNAarray_GBM <- data.frame(
+  sample = colnames(mRNA_array_GBM[, -1, drop = FALSE]),
+  mRNAarray_records_num = apply(mRNA_array_GBM[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
 )
+
+colnames(mRNAseq_LGG) <- sapply(strsplit(colnames(mRNAseq_LGG), "\\."), function(x) paste(x[1:4], collapse = "."))
 
 records_mRNAseq_LGG <- data.frame(
   sample = colnames(mRNAseq_LGG[, -1, drop = FALSE]),
@@ -119,17 +121,48 @@ records_mRNAseq_LGG <- data.frame(
 
 #records_mRNAseq_GBM %>% write.table("../data/samples/TCGA-GBM_mRNAseq_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
 
-#records_mRNAseq_LGG %>% write.table("../data/samples/TCGA-LGG_mRNAseq_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+records_mRNAarray_GBM %>% write.table("../data/samples/TCGA-GBM_mRNAarray_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+records_mRNAseq_LGG %>% write.table("../data/samples/TCGA-LGG_mRNAseq_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
 
 ```
+### remove dup
+```{r}
+mRNA_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM_mRNA.csv.gz"), sep = ",", header = TRUE)
+mRNA_LGG <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-LGG_mRNA.csv.gz"), sep = ",", header = TRUE)
 
+trim_sample_id <- function(x) {
+  sapply(strsplit(x, "\\."), function(parts) paste(parts[1:4], collapse = "."))
+}
+
+records_mRNA_GBM <- data.frame(
+  sample = colnames(mRNA_GBM[, -1, drop = FALSE]),
+  mRNAarray_records_num = apply(mRNA_GBM[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
+)
+
+records_mRNA_LGG <- data.frame(
+  sample = colnames(mRNA_LGG[, -1, drop = FALSE]),
+  mRNA_records_num = apply(mRNA_LGG[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
+)
+
+records_mRNA_GBM$sample <- sub("(\\.[^\\.]+){3}$", "", records_mRNA_GBM$sample)
+
+records_mRNA_LGG$sample <- sub("(\\.[^\\.]+){3}$", "", records_mRNA_LGG$sample)
+
+
+records_mRNA_GBM %>% write.table("../data/samples/TCGA-GBM_mRNA_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+records_mRNA_LGG %>% write.table("../data/samples/TCGA-LGG_mRNA_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+```
 ## Methylation 
 ```{r}
-methy270_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM.methylation27.tsv.gz"), sep = "\t", header = TRUE)
+methy270_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM.methylation270.tsv.gz"), sep = "\t", header = TRUE)
 
-methy450_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM.methylation450.tsv.gz"), sep = "\t", header = TRUE)
+methy450_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM.methylation450.filtered.tsv.gz"), sep = "\t", header = TRUE)
 
-methy450_LGG <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-LGG.methylation450.tsv.gz"), sep = "\t", header = TRUE)
+methy450_LGG <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-LGG.methylation450.filtered.tsv.gz"), sep = "\t", header = TRUE)
 
 records_methy270_GBM <- data.frame(
   sample = colnames(methy270_GBM[, -1, drop = FALSE]),
@@ -148,7 +181,7 @@ records_methy450_LGG <- data.frame(
 
 #records_methy450_GBM %>% write.table("../data/samples/TCGA-GBM_methy450_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
 
-records_methy450_LGG %>% write.table("../data/samples/TCGA-LGG_methy450_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+#records_methy450_LGG %>% write.table("../data/samples/TCGA-LGG_methy450_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
 ```
 
 ### GBM 270k vs 450k overlap
@@ -182,6 +215,28 @@ venn_methyl_GBM <- venn.diagram(
 
 ```
 
+### Methylation - after batch effect correction
+```{r}
+methy_GBM <- read.table("../data/omics_Xena_GDC_TCGA/TCGA_GBM_gene_level_methylation.tsv", sep = "\t", header = TRUE)
+
+methy_LGG <- read.table("../data/omics_Xena_GDC_TCGA/TCGA_LGG_gene_level_methylation.tsv", sep = "\t", header = TRUE)
+
+records_methy_GBM <- data.frame(
+  sample = colnames(methy_GBM[, -1, drop = FALSE]),
+  probe = apply(methy_GBM[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
+)
+
+records_methy_LGG <- data.frame(
+  sample = colnames(methy_LGG[, -1, drop = FALSE]),
+  probe = apply(methy_LGG[, -1, drop = FALSE], 2, function(x) sum(!is.na(x)))
+)
+
+
+records_methy_GBM %>% write.table("../data/samples/TCGA-GBM_methy_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+
+records_methy_LGG %>% write.table("../data/samples/TCGA-LGG_methy_samples.csv",sep="\t",col.names = T,row.names =F,quote = F)
+```
+
 ## protein
 ```{r}
 protein_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM.protein.tsv.gz"), sep = "\t", header = TRUE)
@@ -212,6 +267,7 @@ GBM_list <- list(
   snv = "../data/samples/TCGA-GBM_snv_samples.csv",
   cnv = "../data/samples/TCGA-GBM_cnv_samples.csv",
   mRNAseq = "../data/samples/TCGA-GBM_mRNAseq_samples.csv",
+  mRNAarray = "../data/samples/TCGA-GBM_mRNAarray_samples.csv",
   methy270 = "../data/samples/TCGA-GBM_methy270_samples.csv",
   methy450 = "../data/samples/TCGA-GBM_methy450_samples.csv",
   protein = "../data/samples/TCGA-GBM_protein_samples.csv"
@@ -220,16 +276,26 @@ GBM_list <- list(
 GBM_list_merged <- list(
   snv = "../data/samples/TCGA-GBM_snv_samples.csv",
   cnv = "../data/samples/TCGA-GBM_cnv_samples.csv",
-  mRNAseq = "../data/samples/TCGA-GBM_mRNAseq_samples.csv",
+  mRNAseq = c("../data/samples/TCGA-GBM_mRNAseq_samples.csv",
+              "../data/samples/TCGA-GBM_mRNAarray_samples.csv"),
   methy = c("../data/samples/TCGA-GBM_methy270_samples.csv", 
             "../data/samples/TCGA-GBM_methy450_samples.csv"), 
+  protein = "../data/samples/TCGA-GBM_protein_samples.csv"
+)
+
+GBM_list_corrected <- list(
+  snv = "../data/samples/TCGA-GBM_snv_samples.csv",
+  cnv = "../data/samples/TCGA-GBM_cnv_samples.csv",
+  mRNAseq = "../data/samples/TCGA-GBM_mRNA_samples.csv",
+  methy = "../data/samples/TCGA-GBM_methy_samples.csv", 
   protein = "../data/samples/TCGA-GBM_protein_samples.csv"
 )
 
 LGG_list <- list(
   snv = "../data/samples/TCGA-LGG_snv_samples.csv",
   cnv = "../data/samples/TCGA-LGG_cnv_samples.csv",
-  mRNAseq = "../data/samples/TCGA-LGG_mRNAseq_samples.csv",
+  mRNAseq = "../data/samples/TCGA-LGG_mRNA_samples.csv",
+  methy = "../data/samples/TCGA-LGG_methy_samples.csv",
   protein = "../data/samples/TCGA-LGG_protein_samples.csv"
 )
 
@@ -265,6 +331,7 @@ create_sample_matrix <- function(file_list) {
 
 gbm_matrix <- create_sample_matrix(GBM_list)
 gbm_matrix_merged <- create_sample_matrix(GBM_list_merged)
+gbm_matrix_corrected <- create_sample_matrix(GBM_list_corrected)
 lgg_matrix <- create_sample_matrix(LGG_list)
 
 create_upset <- function(matrix_data, title, color) {
@@ -281,14 +348,11 @@ create_upset <- function(matrix_data, title, color) {
         set_size.show = TRUE)
 }
 
-# 创建图形对象（不打印）
-gbm_plot <- create_upset(gbm_matrix, "GBM Sample Coverage", "darkblue")
-gbm_plot_merged <- create_upset(gbm_matrix_merged, "GBM Merged Sample Coverage", "darkblue")
+gbm_plot_corrected <- create_upset(gbm_matrix_corrected, "GBM Merged Sample Coverage", "darkblue")
 lgg_plot <- create_upset(lgg_matrix, "LGG Sample Coverage", "darkred")
 
-pdf("../data/samples/Combined_UpSet_Plots.pdf", width = 8, height = 6)
-print(gbm_plot)
-print(gbm_plot_merged)
+pdf("../data/samples/Combined_UpSet_Plots_updated.pdf", width = 8, height = 6)
+print(gbm_plot_corrected)
 print(lgg_plot)
 dev.off()
 ```
