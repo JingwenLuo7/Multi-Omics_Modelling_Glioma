@@ -26,6 +26,7 @@ library(stringr)
 library(VennDiagram)
 #BiocManager::install("ChAMP")
 #library(ChAMP)
+library(sva)
 library(gridExtra)
 library(ggplot2)
 library(RColorBrewer)
@@ -52,17 +53,18 @@ colnames(manifest) <- c("id", "gene", "chrom", "start", "end", "strand")
 snp_probe <- fread("../data/omics_Xena_GDC_TCGA/HM450.hg38.snp.tsv.gz") %>% as.data.frame()
 
 outpath="../data/omics_Xena_GDC_TCGA/"
+resultpath="../result/preprocessing/"
 ```
 
 
 ## QC
 ```{r}
-# 1. remove probe with missing value > 50% samples 
-meth270 <- meth270[rowMeans(is.na(meth270)) < 0.5, ]
-meth450 <- meth450[rowMeans(is.na(meth450)) < 0.5, ]
-meth_LGG <- meth_LGG[rowMeans(is.na(meth_LGG)) < 0.5, ]
+# 1. Keep probes with missing values in less than 10% of samples
+meth270 <- meth270[rowMeans(is.na(meth270)) < 0.1, ]
+meth450 <- meth450[rowMeans(is.na(meth450)) < 0.1, ]
+meth_LGG <- meth_LGG[rowMeans(is.na(meth_LGG)) < 0.1, ]
 
-# 2. remove probe from chrX, chrY probe
+# 2. remove probe from chrX, chrY
 manifest <- manifest[!manifest$chrom %in% c("chrX", "chrY"), ]
 
 # 3. remove probe related to snp
@@ -90,7 +92,7 @@ set3 <- rownames(meth_LGG_filtered)
 
 venn.plot <- venn.diagram(
   x = list( "270K" = set1,"450K" = set2,"LGG" = set3),
-  filename = paste0(outpath,"Probes_venn_plot.png"),
+  filename = paste0(resultpath,"Methy_Probes_venn_plot.png"),
   imagetype = "png",
   fill = c("cornflowerblue", "darkorange","lightyellow"),
   alpha = 0.5,
@@ -135,15 +137,18 @@ get_gene_meth <- function(meth_matrix, probe_gene_df) {
   as.data.frame(gene_meth)
 }
 
-gene_meth270 <- get_gene_meth(meth270_filtered, probe_gene_df)
-gene_meth450 <- get_gene_meth(meth450_filtered, probe_gene_df)
-gene_methLGG <- get_gene_meth(meth_LGG_filtered, probe_gene_df)
+all_probe <- union(union(rownames(meth270_filtered),rownames(meth450_filtered)),rownames(meth_LGG_filtered)) %>% unique()
+
+selected_probe_gene_df <- probe_gene_df %>% filter(id %in% all_probe)
+gene_meth270 <- get_gene_meth(meth270_filtered, selected_probe_gene_df)
+gene_meth450 <- get_gene_meth(meth450_filtered, selected_probe_gene_df)
+gene_methLGG <- get_gene_meth(meth_LGG_filtered, selected_probe_gene_df)
 
 
-# remove genes with missing value > 50% samples 
-gene_meth270_filtered <- gene_meth270[rowMeans(is.na(gene_meth270)) < 0.5, ]
-gene_meth450_filtered <- gene_meth450[rowMeans(is.na(gene_meth450)) < 0.5, ]
-gene_methLGG_filtered <- gene_methLGG[rowMeans(is.na(gene_methLGG)) < 0.5, ]
+# Keep genes with missing values in less than 10% of samples
+gene_meth270_filtered <- gene_meth270[rowMeans(is.na(gene_meth270)) < 0.1, ]
+gene_meth450_filtered <- gene_meth450[rowMeans(is.na(gene_meth450)) < 0.1, ]
+gene_methLGG_filtered <- gene_methLGG[rowMeans(is.na(gene_methLGG)) < 0.1, ]
 
 ```
 
@@ -155,7 +160,7 @@ set3 <- rownames(gene_methLGG_filtered)
 
 venn.plot <- venn.diagram(
   x = list( "270K" = set1,"450K" = set2,"LGG" = set3),
-  filename = paste0(outpath,"Methy_genes_venn_plot.png"),
+  filename = paste0(resultpath,"Methy_genes_venn_plot.png"),
   imagetype = "png",
   fill = c("cornflowerblue", "darkorange","lightyellow"),
   alpha = 0.5,
@@ -201,11 +206,11 @@ p_before <- ggplot(pca_df, aes(x = PC1, y = PC2, color = batch)) +
        x = "PC1", y = "PC2")
 p_before
 
-ggsave(paste0(outpath,"pca_methylation_batch_before.png"), plot = p_before, width = 6, height = 5, dpi = 300)
+ggsave(paste0(resultpath,"pca_methylation_batch_before.png"), plot = p_before, width = 6, height = 5, dpi = 300)
 ```
 ## Batch Effect Correction 
 ```{r}
-library(sva)
+
 modcombat <- model.matrix(~1, data = data.frame(batch = batch))
 meth_corrected <- ComBat(dat = t(meth_t), batch = batch, mod = modcombat,par.prior = TRUE, prior.plots = FALSE)
 
@@ -222,8 +227,9 @@ p_after <- ggplot(pca_df2, aes(x = PC1, y = PC2, color = batch)) +
        x = "PC1", y = "PC2")
 p_after
 
-ggsave(paste0(outpath,"pca_methylation_batch_corrected.png"), plot = p_after, width = 6, height = 5, dpi = 300)
+ggsave(paste0(resultpath,"pca_methylation_batch_corrected.png"), plot = p_after, width = 6, height = 5, dpi = 300)
 ```
+
 
 ## save OUTPUT
 ```{r}
