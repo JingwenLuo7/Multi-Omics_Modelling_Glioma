@@ -173,8 +173,30 @@ venn.plot <- venn.diagram(
 
 ```
 
+## save OUTPUT
+### GBM
+```{r}
+common_genes <- intersect(rownames(gene_meth270), rownames(gene_meth450))
+gene_meth270_common <- gene_meth270[common_genes, , drop = FALSE]
+gene_meth450_common <- gene_meth450[common_genes, , drop = FALSE]
 
-## check batch for GBM
+colnames(gene_meth270_common) <- gsub("\\.", "-", colnames(gene_meth270_common))
+colnames(gene_meth450_common) <- gsub("\\.", "-", colnames(gene_meth450_common))
+
+overlap_samples <- intersect(colnames(gene_meth270_common), colnames(gene_meth450_common))
+gene_meth270_filtered <- gene_meth270_common[, !(colnames(gene_meth270_common) %in% overlap_samples), drop = FALSE]
+
+gene_meth_all <- cbind(gene_meth270_filtered, gene_meth450_common)
+
+gene_meth_all %>% write.table(gzfile(paste0(outpath,"TCGA_GBM_gene_level_methylation.tsv.gz")),sep="\t",col.names = T,row.names =T,quote = F)
+```
+
+### LGG
+```{r}
+gene_methLGG_filtered %>% write.table(gzfile(paste0(outpath,"TCGA_LGG_gene_level_methylation.tsv.gz")),sep="\t",col.names = T,row.names =T,quote = F)
+```
+
+## check batch for GBM (do this after spliting data)
 ```{r}
 # merge matrix
 common_genes <- intersect(rownames(gene_meth270), rownames(gene_meth450))
@@ -208,7 +230,9 @@ p_before
 
 ggsave(paste0(resultpath,"pca_methylation_batch_before.png"), plot = p_before, width = 6, height = 5, dpi = 300)
 ```
-## Batch Effect Correction 
+
+
+## Batch Effect Correction (do this after spliting data)
 ```{r}
 
 modcombat <- model.matrix(~1, data = data.frame(batch = batch))
@@ -231,12 +255,7 @@ ggsave(paste0(resultpath,"pca_methylation_batch_corrected.png"), plot = p_after,
 ```
 
 
-## save OUTPUT
-```{r}
-t(meth_corrected_t) %>% write.table(paste0(outpath,"TCGA_GBM_gene_level_methylation.tsv"),sep="\t",col.names = T,row.names =T,quote = F)
 
-gene_methLGG_filtered %>% write.table(paste0(outpath,"TCGA_LGG_gene_level_methylation.tsv"),sep="\t",col.names = T,row.names =T,quote = F)
-```
 
 ## References
 
