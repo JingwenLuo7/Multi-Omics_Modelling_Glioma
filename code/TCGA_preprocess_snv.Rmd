@@ -1,0 +1,247 @@
+---
+title: "TCGA_preprocess_snv"
+author: "luojingwen"
+date: "2025-06-21"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    extra_dependencies: ["ctex"]
+header-includes:
+  - \usepackage{ctex}
+lang: en
+editor_options: 
+  chunk_output_type: inline
+---
+
+#library
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+rm(list=ls())
+options(stringsAsFactors = F)
+
+library(data.table)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(reshape2)
+library(maftools)
+library(pheatmap)
+library(gridExtra)
+library(ggplot2)
+library(RColorBrewer)
+
+```
+
+## load data
+```{r}
+snv_GBM <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-GBM.somaticmutation_wxs.tsv.gz"), sep = "\t", header = TRUE) %>% filter(start !=-1)
+
+snv_LGG <- read.table(gzfile("../data/omics_Xena_GDC_TCGA/TCGA-LGG.somaticmutation_wxs.tsv.gz"), sep = "\t", header = TRUE) %>% filter(start !=-1)
+
+outpath="../data/preprocessed_TCGA/"
+```
+
+```{r}
+snv_GBM %>% group_by(sample) %>% summarise(snv = n()) %>% 
+  ggplot( aes(x = snv)) + geom_histogram(binwidth = 5, fill = "lightblue", colour = "black")+ggtitle("SNV sample distribution in GBM")
+
+snv_LGG %>% group_by(sample) %>% summarise(snv = n()) %>% ggplot( aes(x = snv)) +
+    geom_histogram(binwidth = 5, fill = "lightblue", colour = "black")+
+    ggtitle("SNV sample distribution in LGG")
+
+
+snv_GBM %>% group_by(sample) %>% summarise(snv = n()) %>% mutate(type = "GBM") %>% 
+  rbind(snv_LGG %>% group_by(sample) %>% summarise(snv = n()) %>% mutate(type = "LGG")) %>%
+  ggplot(aes(x = type, y = snv, fill = factor(type))) + 
+  geom_boxplot() + 
+  scale_y_continuous(
+    trans = "log10",
+    breaks = c(1, 10, 100, 1000, 10000)) +
+  scale_fill_brewer(palette = "Pastel2") +
+  ggtitle("SNV records counts in GBM/LGG")+
+  labs(y = "SNV count (log scale)", fill = "Type")+theme_minimal()
+```
+
+## Function: VAF-based mutation matrix
+```{r}
+create_vaf_dataframe <- function(snv_df, vaf_col = "dna_vaf", gene_col = "gene", sample_col = "sample", vaf_filter = NULL) {
+
+  # Step 1: (optional) filter vaf
+  if (!is.null(vaf_filter)) {
+    snv_df <- snv_df[snv_df[[vaf_col]] > vaf_filter, ]
+  }
+
+  # Step 2: create sample × gene matrix
+  mutation_matrix <- dcast(
+    snv_df,
+    formula = as.formula(paste(sample_col, "~", gene_col)),
+    value.var = vaf_col,
+    fun.aggregate = max,
+    fill = 0
+  )
+
+  # Step 3: transpose and set colnames and rownames
+  sample_ids <- mutation_matrix[[sample_col]]
+  mutation_matrix[[sample_col]] <- NULL
+
+  mutation_matrix_t <- t(as.matrix(mutation_matrix))
+  colnames(mutation_matrix_t) <- sample_ids
+  
+  df <- as.data.frame(mutation_matrix_t)
+  df$gene <- rownames(df)
+  df <- df[, c("gene", setdiff(colnames(df), "gene"))] 
+
+  return(df)
+}
+
+```
+
+## OUTPUT: mutation matrix
+```{r}
+mutation_matrix_GBM <- create_vaf_dataframe(snv_GBM)
+mutation_matrix_LGG <- create_vaf_dataframe(snv_LGG)
+
+mutation_matrix_GBM %>% write.table(gzfile(paste0(outpath,"TCGA_GBM_mutation.tsv.gz")),sep="\t",col.names = T,row.names =F,quote = F)
+
+mutation_matrix_LGG %>% write.table(gzfile(paste0(outpath,"TCGA_LGG_mutation.tsv.gz")),sep="\t",col.names = T,row.names =F,quote = F)
+```
+
+## Function: plot distribution of mutation
+```{r}
+plot_mutation_frequency <- function(vaf_df,
+                                    top_n = 50,
+                                    plot_type = c("bar", "hist")) {
+
+  rownames(vaf_df) <- vaf_df$gene
+  vaf_matrix <- as.matrix(vaf_df[, -1])
+
+  # calculate mutation frequency
+  mutation_counts <- rowSums(vaf_matrix > 0)
+  mutation_freq_df <- data.frame(
+    gene = names(mutation_counts),
+    mutated_samples = mutation_counts,
+    mutation_frequency = mutation_counts / ncol(vaf_matrix)
+  )
+
+  plot_type <- match.arg(plot_type)
+  p <- NULL
+  if (plot_type == "bar") {
+    top_genes_df <- head(mutation_freq_df[order(-mutation_freq_df$mutation_frequency), ], top_n)
+    top_genes_df$gene <- factor(top_genes_df$gene, levels = top_genes_df$gene[order(top_genes_df$mutation_frequency)])
+
+    p <- ggplot(top_genes_df, aes(x = gene, y = mutation_frequency)) +
+      geom_bar(stat = "identity", fill = "tomato") +
+      coord_flip() +
+      ylab("Mutation Frequency") +
+      xlab("Gene") +
+      ggtitle(paste("Top", top_n, "Mutated Genes")) +
+      theme_minimal()
+  } else if (plot_type == "hist") {
+    p <- ggplot(mutation_freq_df, aes(x = mutation_frequency)) +
+      geom_histogram(binwidth = 0.01, fill = "skyblue", color = "white") +
+      xlab("Mutation Frequency") +
+      ylab("Gene Count") +
+      ggtitle("Histogram of Gene Mutation Frequencies") +
+      theme_minimal()
+  }
+  print(p)
+  return(invisible(mutation_freq_df))
+}
+
+```
+
+### Plot: TOP20 mutated genes
+```{r}
+plot_mutation_frequency(mutation_matrix_GBM,top_n = 20)
+plot_mutation_frequency(mutation_matrix_LGG,top_n = 20)
+```
+### Plot: distrubution of frequency
+
+```{r}
+plot_mutation_frequency(mutation_matrix_GBM, plot_type = "hist")
+plot_mutation_frequency(mutation_matrix_LGG, plot_type = "hist")
+```
+## Function: create MAF Obj 
+```{r}
+build_maf_from_xena <- function(snv_df) {
+  # infer Variant_Type
+  infer_variant_type <- function(ref, alt) {
+    ref_len <- nchar(ref)
+    alt_len <- nchar(alt)
+
+    if (ref_len == 1 && alt_len == 1) {
+      return("SNP")
+    } else if (ref_len == 0 && alt_len > 0) {
+      return("INS")
+    } else if (ref_len > 0 && alt_len == 0) {
+      return("DEL")
+    } else if (ref_len == alt_len) {
+      if (ref_len == 2) return("DNP")
+      if (ref_len == 3) return("TNP")
+      return("ONP")
+    } else if (ref_len < alt_len) {
+      return("INS")
+    } else {
+      return("DEL")
+    }
+  }
+  
+  map_variant_classification <- function(vc) {
+    vc <- tolower(vc)  # 小写统一
+    if (grepl("missense", vc)) return("Missense_Mutation")
+    if (grepl("nonsense|stop_gained", vc)) return("Nonsense_Mutation")
+    if (grepl("frameshift", vc)) return("Frame_Shift_Indel")
+    if (grepl("inframe_deletion", vc)) return("In_Frame_Del")
+    if (grepl("inframe_insertion", vc)) return("In_Frame_Ins")
+    if (grepl("start_lost", vc)) return("Translation_Start_Site")
+    if (grepl("stop_lost", vc)) return("Nonstop_Mutation")
+    if (grepl("splice", vc)) return("Splice_Site")
+    if (grepl("synonymous", vc)) return("Silent")
+    return("Other")  # 默认保底
+  }
+
+  # create MAF
+  maf_df <- data.frame(
+    Hugo_Symbol = snv_df$gene,
+    Chromosome = gsub("chr", "", snv_df$chrom),
+    Start_Position = snv_df$start,
+    End_Position = snv_df$end,
+    Reference_Allele = snv_df$ref,
+    Tumor_Seq_Allele2 = snv_df$alt,
+    Variant_Classification = sapply(snv_df$effect, map_variant_classification),
+    Variant_Type = variant_types <- mapply(infer_variant_type, snv_df$ref, snv_df$alt),
+    Tumor_Sample_Barcode = snv_df$sample,
+    Amino_Acid_Change = snv_df$Amino_Acid_Change,
+    Caller = snv_df$callers,
+    t_alt_freq = snv_df$dna_vaf,
+    stringsAsFactors = FALSE
+  )
+
+  return(maf_df)
+}
+```
+
+### Plot: Summary - GBM
+```{r}
+maf_GBM <- build_maf_from_xena(snv_GBM)
+
+maf_obj_GBM <- read.maf(maf = maf_GBM)
+
+plotmafSummary(maf = maf_obj_GBM, rmOutlier = TRUE, 
+			   addStat = 'median', dashboard = TRUE, 
+			   titvRaw = FALSE)
+
+```
+
+### Plot: Summary - LGG
+```{r}
+maf_LGG <- build_maf_from_xena(snv_LGG)
+
+maf_obj_LGG <- read.maf(maf = maf_LGG)
+
+plotmafSummary(maf = maf_obj_LGG, rmOutlier = TRUE, 
+			   addStat = 'median', dashboard = TRUE, 
+			   titvRaw = FALSE)
+
+```
+
