@@ -64,48 +64,99 @@ snv_GBM %>% group_by(sample) %>% summarise(snv = n()) %>% mutate(type = "GBM") %
 
 ## Function: VAF-based mutation matrix
 ```{r}
+
 create_vaf_dataframe <- function(snv_df, vaf_col = "dna_vaf", gene_col = "gene", sample_col = "sample", vaf_filter = NULL) {
 
-  # Step 1: (optional) filter vaf
+  # Step 0: ensure data.table
+  snv_df <- as.data.table(snv_df)
+
+  # Step 1: optional VAF filter
   if (!is.null(vaf_filter)) {
-    snv_df <- snv_df[snv_df[[vaf_col]] > vaf_filter, ]
+    snv_df <- snv_df[get(vaf_col) > vaf_filter]
   }
 
-  # Step 2: create sample × gene matrix
+  # Step 2: aggregate by sample × gene to get max VAF
+  snv_df_agg <- snv_df[, .(vaf = max(get(vaf_col), na.rm = TRUE)), by = c(sample_col, gene_col)]
+
+  # Step 3: dcast to sample × gene matrix (wide format), keep NA
   mutation_matrix <- dcast(
-    snv_df,
+    snv_df_agg,
     formula = as.formula(paste(sample_col, "~", gene_col)),
-    value.var = vaf_col,
-    fun.aggregate = max,
-    fill = 0
+    value.var = "vaf"
   )
 
-  # Step 3: transpose and set colnames and rownames
+  # Step 4: transpose and reshape
   sample_ids <- mutation_matrix[[sample_col]]
   mutation_matrix[[sample_col]] <- NULL
 
   mutation_matrix_t <- t(as.matrix(mutation_matrix))
   colnames(mutation_matrix_t) <- sample_ids
-  
+
   df <- as.data.frame(mutation_matrix_t)
   df$gene <- rownames(df)
-  df <- df[, c("gene", setdiff(colnames(df), "gene"))] 
+  df <- df[, c("gene", setdiff(colnames(df), "gene"))]
 
   return(df)
 }
 
+
 ```
 
-## OUTPUT: mutation matrix
+## Check missing values
 ```{r}
 mutation_matrix_GBM <- create_vaf_dataframe(snv_GBM)
 mutation_matrix_LGG <- create_vaf_dataframe(snv_LGG)
+
+na_counts_GBM <- rowSums(is.na(mutation_matrix_GBM[, -1]))
+
+na_df_GBM <- data.frame(
+  gene = mutation_matrix_GBM$gene,
+  n_missing = na_counts_GBM,
+  row.names = NULL
+)
+
+ggplot(na_df_GBM, aes(x = n_missing)) +
+      geom_histogram(binwidth = 5, fill = "skyblue", color = "white") +
+      xlab("Missing values") +
+      ylab("Gene Counts") +
+      ggtitle("Histogram of Missing Values") +
+      theme_minimal()
+
+
+na_counts_LGG <- rowSums(is.na(mutation_matrix_LGG[, -1]))
+
+na_df_LGG <- data.frame(
+  gene = mutation_matrix_LGG$gene,
+  n_missing = na_counts_LGG,
+  row.names = NULL
+)
+
+ggplot(na_df_LGG, aes(x = n_missing)) +
+      geom_histogram(binwidth = 5, fill = "skyblue", color = "white") +
+      xlab("Missing values") +
+      ylab("Gene Counts") +
+      ggtitle("Histogram of Missing Values") +
+      theme_minimal()
+```
+## OUTPUT: fill with 0 and mutation matrix
+```{r}
+mutation_matrix_GBM[, -1] <- lapply(mutation_matrix_GBM[, -1], function(x) {
+  x[is.na(x)] <- 0
+  return(x)
+})
+
+mutation_matrix_LGG[, -1] <- lapply(mutation_matrix_LGG[, -1], function(x) {
+  x[is.na(x)] <- 0
+  return(x)
+})
+
 
 mutation_matrix_GBM %>% write.table(gzfile(paste0(outpath,"TCGA_GBM_mutation.tsv.gz")),sep="\t",col.names = T,row.names =F,quote = F)
 
 mutation_matrix_LGG %>% write.table(gzfile(paste0(outpath,"TCGA_LGG_mutation.tsv.gz")),sep="\t",col.names = T,row.names =F,quote = F)
 ```
 
+# Genaral Summary
 ## Function: plot distribution of mutation
 ```{r}
 plot_mutation_frequency <- function(vaf_df,
