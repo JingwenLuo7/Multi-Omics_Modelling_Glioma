@@ -1,0 +1,35 @@
+bcr_patient_barcode,gender,age_at_initial_pathologic_diagnosis,days_to_death,days_to_last_followup,histological_type,tumor_location,neoplasm_histologic_grade,supratentorial_localization,laterality,first_presenting_symptom,IDH1_status,IDH1_mutation,IDH2_status,IDH2_mutation,data_set_information,sample
+TCGA-DH-A669,MALE,70,919,NA,Oligodendroglioma,Supratentorial, Parietal Lobe,G3,Not listed in Medical Record,Left,Mental Status Changes,Mutant,p.R132H,Wildtype,NA,Train,TCGA-DH-A669-02A
+TCGA-DH-A669,MALE,70,919,NA,Oligodendroglioma,Supratentorial, Parietal Lobe,G3,Not listed in Medical Record,Left,Mental Status Changes,Mutant,p.R132H,Wildtype,NA,Internal Test,TCGA-DH-A669-01A
+TCGA-DU-5870,FEMALE,34,NA,5546,Oligodendroglioma,Supratentorial, Temporal Lobe,G2,Not listed in Medical Record,Right,Headaches,Mutant,p.R132H,Wildtype,NA,Train,TCGA-DU-5870-01A
+TCGA-DU-5870,FEMALE,34,NA,5546,Oligodendroglioma,Supratentorial, Temporal Lobe,G2,Not listed in Medical Record,Right,Headaches,Mutant,p.R132H,Wildtype,NA,Train,TCGA-DU-5870-02A
+TCGA-DU-5872,FEMALE,43,NA,532,Oligoastrocytoma,Supratentorial, Frontal Lobe,G2,Not listed in Medical Record,Left,Headaches,Mutant,p.R132H,Wildtype,NA,Train,TCGA-DU-5872-01A
+TCGA-DU-5872,FEMALE,43,NA,532,Oligoastrocytoma,Supratentorial, Frontal Lobe,G2,Not listed in Medical Record,Left,Headaches,Mutant,p.R132H,Wildtype,NA,Internal Test,TCGA-DU-5872-02A
+TCGA-DU-5872,FEMALE,43,NA,532,Oligoastrocytoma,Supratentorial, Frontal Lobe,G2,Not listed in Medical Record,Left,Headaches,Wildtype,NA,Wildtype,NA,Train,TCGA-DU-5872-01A
+TCGA-DU-5872,FEMALE,43,NA,532,Oligoastrocytoma,Supratentorial, Frontal Lobe,G2,Not listed in Medical Record,Left,Headaches,Wildtype,NA,Wildtype,NA,Internal Test,TCGA-DU-5872-02A
+TCGA-DU-6397,MALE,45,1401,NA,Oligodendroglioma,Supratentorial, Temporal Lobe,G3,Not listed in Medical Record,Right,Headaches,Mutant,p.R132H,Wildtype,NA,Train,TCGA-DU-6397-01A
+TCGA-DU-6397,MALE,45,1401,NA,Oligodendroglioma,Supratentorial, Temporal Lobe,G3,Not listed in Medical Record,Right,Headaches,Mutant,p.R132H,Wildtype,NA,Train,TCGA-DU-6397-02A
+TCGA-DU-6404,FEMALE,24,4068,NA,Oligodendroglioma,Supratentorial, Frontal Lobe,G3,Not listed in Medical Record,Right,Seizures,Wildtype,NA,Wildtype,NA,Train,TCGA-DU-6404-02B
+TCGA-DU-6404,FEMALE,24,4068,NA,Oligodendroglioma,Supratentorial, Frontal Lobe,G3,Not listed in Medical Record,Right,Seizures,Wildtype,NA,Wildtype,NA,Internal Test,TCGA-DU-6404-01A
+TCGA-DU-6404,FEMALE,24,4068,NA,Oligodendroglioma,Supratentorial, Frontal Lobe,G3,Not listed in Medical Record,Right,Seizures,Wildtype,NA,Wildtype,NA,Internal Test,TCGA-DU-6404-02A
+TCGA-DU-6407,FEMALE,35,2875,NA,Oligodendroglioma,,G2,Not listed in Medical Record,Right,Seizures,Mutant,p.R132H,Wildtype,NA,Train,TCGA-DU-6407-01A
+TCGA-DU-6407,FEMALE,35,2875,NA,Oligodendroglioma,,G2,Not listed in Medical Record,Right,Seizures,Mutant,p.R132H,Wildtype,NA,Train,TCGA-DU-6407-02A
+TCGA-DU-6407,FEMALE,35,2875,NA,Oligodendroglioma,,G2,Not listed in Medical Record,Right,Seizures,Mutant,p.R132H,Wildtype,NA,Internal Test,TCGA-DU-6407-02B
+TCGA-DU-7304,MALE,43,709,NA,Oligoastrocytoma,Supratentorial, Frontal Lobe,G3,Not listed in Medical Record,Left,Seizures,Mutant,p.R132G,Wildtype,NA,Train,TCGA-DU-7304-01A
+TCGA-DU-7304,MALE,43,709,NA,Oligoastrocytoma,Supratentorial, Frontal Lobe,G3,Not listed in Medical Record,Left,Seizures,Mutant,p.R132G,Wildtype,NA,Internal Test,TCGA-DU-7304-02A
+TCGA-FG-5963,MALE,23,NA,547,Astrocytoma,Supratentorial, Frontal Lobe,G3,White Matter,Right,Seizures,Wildtype,NA,Wildtype,NA,External Test,TCGA-FG-5963-01A
+TCGA-FG-5963,MALE,23,NA,547,Astrocytoma,Supratentorial, Frontal Lobe,G3,White Matter,Right,Seizures,Wildtype,NA,Wildtype,NA,External Test,TCGA-FG-5963-02A
+TCGA-FG-5965,FEMALE,39,NA,979,Oligoastrocytoma,Supratentorial, Frontal Lobe,G2,White Matter,Right,Seizures,Mutant,p.R132H,Wildtype,NA,External Test,TCGA-FG-5965-02A
+TCGA-FG-5965,FEMALE,39,NA,979,Oligoastrocytoma,Supratentorial, Frontal Lobe,G2,White Matter,Right,Seizures,Mutant,p.R132H,Wildtype,NA,External Test,TCGA-FG-5965-01B
+TCGA-FG-5965,FEMALE,39,NA,979,Oligoastrocytoma,Supratentorial, Frontal Lobe,G2,White Matter,Right,Seizures,Mutant,p.R132H,Wildtype,NA,External Test,TCGA-FG-5965-02B
+TCGA-FG-A4MT,FEMALE,27,NA,1164,Oligodendroglioma,Supratentorial, Temporal Lobe,G2,Not listed in Medical Record,Left,Seizures,Mutant,p.R132H,Wildtype,NA,External Test,TCGA-FG-A4MT-02A
+TCGA-FG-A4MT,FEMALE,27,NA,1164,Oligodendroglioma,Supratentorial, Temporal Lobe,G2,Not listed in Medical Record,Left,Seizures,Mutant,p.R132H,Wildtype,NA,External Test,TCGA-FG-A4MT-01A
+TCGA-TM-A7CF,FEMALE,41,NA,1989,Astrocytoma,Supratentorial, Frontal Lobe,G2,Not listed in Medical Record,Right,Seizures,Mutant,p.R132H,Wildtype,NA,Train,TCGA-TM-A7CF-02A
+TCGA-TM-A7CF,FEMALE,41,NA,1989,Astrocytoma,Supratentorial, Frontal Lobe,G2,Not listed in Medical Record,Right,Seizures,Mutant,p.R132H,Wildtype,NA,Train,TCGA-TM-A7CF-01A
+TCGA-TQ-A7RK,MALE,29,NA,1341,Oligoastrocytoma,Supratentorial, Frontal Lobe,G2,White Matter,Left,Mental Status Changes,Mutant,p.R132G,Wildtype,NA,External Test,TCGA-TQ-A7RK-02A
+TCGA-TQ-A7RK,MALE,29,NA,1341,Oligoastrocytoma,Supratentorial, Frontal Lobe,G2,White Matter,Left,Mental Status Changes,Mutant,p.R132G,Wildtype,NA,External Test,TCGA-TQ-A7RK-01A
+TCGA-TQ-A7RK,MALE,29,NA,1341,Oligoastrocytoma,Supratentorial, Frontal Lobe,G2,White Matter,Left,Mental Status Changes,Mutant,p.R132G,Wildtype,NA,External Test,TCGA-TQ-A7RK-02B
+TCGA-TQ-A7RV,MALE,27,NA,1868,Astrocytoma,Supratentorial, Temporal Lobe,G2,White Matter,Left,Sensory Changes,Mutant,p.R132H,Wildtype,NA,External Test,TCGA-TQ-A7RV-02A
+TCGA-TQ-A7RV,MALE,27,NA,1868,Astrocytoma,Supratentorial, Temporal Lobe,G2,White Matter,Left,Sensory Changes,Mutant,p.R132H,Wildtype,NA,External Test,TCGA-TQ-A7RV-01A
+TCGA-TQ-A8XE,FEMALE,42,954,NA,Oligodendroglioma,Supratentorial, Temporal Lobe,G2,White Matter,Left,Headaches,Mutant,p.R132H,Wildtype,NA,External Test,TCGA-TQ-A8XE-02A
+TCGA-TQ-A8XE,FEMALE,42,954,NA,Oligodendroglioma,Supratentorial, Temporal Lobe,G2,White Matter,Left,Headaches,Mutant,p.R132H,Wildtype,NA,External Test,TCGA-TQ-A8XE-01A

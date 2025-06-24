@@ -1,0 +1,35 @@
+bcr_patient_barcode,gender,age_at_initial_pathologic_diagnosis,days_to_death,days_to_last_followup,histological_type,prior_glioma,IDH1_status,IDH1_mutation,IDH2_status,IDH2_mutation,data_set_information,sample
+TCGA-06-0125,FEMALE,63,1448,1439,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-06-0125-02A
+TCGA-06-0125,FEMALE,63,1448,1439,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Internal Test,TCGA-06-0125-01A
+TCGA-06-0137,FEMALE,63,812,702,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-06-0137-01A
+TCGA-06-0137,FEMALE,63,812,702,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Internal Test,TCGA-06-0137-01B
+TCGA-06-0152,MALE,68,375,359,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-06-0152-01A
+TCGA-06-0152,MALE,68,375,359,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-06-0152-02A
+TCGA-06-0171,MALE,65,399,396,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-06-0171-01A
+TCGA-06-0171,MALE,65,399,396,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-06-0171-02A
+TCGA-06-0190,MALE,62,317,313,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-06-0190-01A
+TCGA-06-0190,MALE,62,317,313,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Validation,TCGA-06-0190-02A
+TCGA-06-0208,FEMALE,52,256,167,Untreated primary (de novo) GBM,NO,Unknown,NA,NA,NA,Train,TCGA-06-0208-01B
+TCGA-06-0208,FEMALE,52,256,167,Untreated primary (de novo) GBM,NO,Unknown,NA,NA,NA,Internal Test,TCGA-06-0208-01A
+TCGA-06-0210,FEMALE,72,225,151,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-06-0210-01B
+TCGA-06-0210,FEMALE,72,225,151,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Internal Test,TCGA-06-0210-02A
+TCGA-06-0210,FEMALE,72,225,151,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Internal Test,TCGA-06-0210-01A
+TCGA-06-0211,MALE,47,360,360,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-06-0211-02A
+TCGA-06-0211,MALE,47,360,360,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-06-0211-01B
+TCGA-06-0211,MALE,47,360,360,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-06-0211-01A
+TCGA-06-0221,MALE,31,603,548,Untreated primary (de novo) GBM,NO,Mutant,p.R132G,Wildtype,NA,Train,TCGA-06-0221-02A
+TCGA-06-0221,MALE,31,603,548,Untreated primary (de novo) GBM,NO,Mutant,p.R132G,Wildtype,NA,Validation,TCGA-06-0221-01A
+TCGA-14-0736,MALE,49,460,460,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-14-0736-02A
+TCGA-14-0736,MALE,49,460,460,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Validation,TCGA-14-0736-01A
+TCGA-14-1034,FEMALE,60,485,485,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-14-1034-01A
+TCGA-14-1034,FEMALE,60,485,485,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-14-1034-02B
+TCGA-14-1402,FEMALE,58,975,975,Untreated primary (de novo) GBM,NO,Unknown,NA,NA,NA,Train,TCGA-14-1402-01A
+TCGA-14-1402,FEMALE,58,975,975,Untreated primary (de novo) GBM,NO,Unknown,NA,NA,NA,Train,TCGA-14-1402-02A
+TCGA-19-0957,FEMALE,48,666,666,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Internal Test,TCGA-19-0957-01C
+TCGA-19-0957,FEMALE,48,666,666,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Internal Test,TCGA-19-0957-02A
+TCGA-19-1389,MALE,51,141,141,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-19-1389-01A
+TCGA-19-1389,MALE,51,141,141,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-19-1389-02A
+TCGA-19-4065,MALE,36,NA,214,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Train,TCGA-19-4065-01A
+TCGA-19-4065,MALE,36,NA,214,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Internal Test,TCGA-19-4065-02A
+TCGA-76-6661,MALE,54,NA,7,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Validation,TCGA-76-6661-01B
+TCGA-76-6661,MALE,54,NA,7,Untreated primary (de novo) GBM,NO,Wildtype,NA,Wildtype,NA,Internal Test,TCGA-76-6661-01A
