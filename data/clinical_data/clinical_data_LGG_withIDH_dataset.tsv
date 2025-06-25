@@ -1,0 +1,537 @@
+bcr_patient_barcode	gender	age_at_initial_pathologic_diagnosis	days_to_death	days_to_last_followup	histological_type	tumor_location	neoplasm_histologic_grade	supratentorial_localization	laterality	first_presenting_symptom	IDH1_status	IDH1_mutation	IDH2_status	IDH2_mutation	data_set_information	sample
+TCGA-CS-4938	FEMALE	31	NA	3574	Astrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-CS-4938-01B
+TCGA-CS-4941	MALE	67	234	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Headaches	Wildtype	NA	Wildtype	NA	Train	TCGA-CS-4941-01A
+TCGA-CS-4942	FEMALE	44	1335	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-CS-4942-01A
+TCGA-CS-4943	MALE	37	NA	552	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-CS-4943-01A
+TCGA-CS-4944	MALE	50	NA	1828	Astrocytoma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Right	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-CS-4944-01A
+TCGA-CS-5390	FEMALE	47	NA	NA	Oligodendroglioma	Supratentorial, Parietal Lobe	G2	Cerebral Cortex	Right	Sensory Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-CS-5390-01A
+TCGA-CS-5393	MALE	39	NA	1222	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-CS-5393-01A
+TCGA-CS-5394	MALE	40	NA	8	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-CS-5394-01A
+TCGA-CS-5395	MALE	43	639	NA	Oligodendroglioma	Supratentorial, Parietal Lobe	G2	Cerebral Cortex	Right		Wildtype	NA	Wildtype	NA	Train	TCGA-CS-5395-01A
+TCGA-CS-5396	FEMALE	53	NA	1631	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-CS-5396-01A
+TCGA-CS-5397	FEMALE	54	194	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Sensory Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-CS-5397-01A
+TCGA-CS-6186	MALE	58	538	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-CS-6186-01A
+TCGA-CS-6188	MALE	48	NA	725	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Right	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-CS-6188-01A
+TCGA-CS-6290	MALE	31	NA	546	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-CS-6290-01A
+TCGA-CS-6665	FEMALE	51	NA	1568	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-CS-6665-01A
+TCGA-CS-6666	MALE	22	NA	1428	Astrocytoma	Supratentorial, Parietal Lobe	G3	Cerebral Cortex	Right	Headaches	Mutant	p.R132C	Wildtype	NA	Internal Test	TCGA-CS-6666-01A
+TCGA-CS-6667	FEMALE	39	NA	1469	Astrocytoma	Supratentorial, Parietal Lobe	G2	Cerebral Cortex	Left	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-CS-6667-01A
+TCGA-CS-6668	FEMALE	57	NA	1519	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-CS-6668-01A
+TCGA-CS-6669	FEMALE	26	NA	1494	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Right	Headaches	Unknown	NA	NA	NA	Internal Test	TCGA-CS-6669-01A
+TCGA-CS-6670	MALE	43	NA	1426	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-CS-6670-01A
+TCGA-DB-5270	FEMALE	38	NA	3733	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DB-5270-01A
+TCGA-DB-5273	MALE	33	NA	2493	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DB-5273-01A
+TCGA-DB-5274	FEMALE	37	NA	2289	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-5274-01A
+TCGA-DB-5275	MALE	36	NA	1458	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-5275-01A
+TCGA-DB-5276	MALE	32	NA	2218	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132C	Wildtype	NA	Train	TCGA-DB-5276-01A
+TCGA-DB-5277	MALE	34	NA	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-5277-01A
+TCGA-DB-5278	MALE	17	NA	2772	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-5278-01A
+TCGA-DB-5279	MALE	59	NA	1354	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DB-5279-01A
+TCGA-DB-5280	MALE	43	NA	1112	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-DB-5280-01A
+TCGA-DB-5281	MALE	61	NA	2381	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Deep Gray (e.g.basal ganglia, thalamus)	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-DB-5281-01A
+TCGA-DB-A4X9	FEMALE	33	NA	1412	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-A4X9-01A
+TCGA-DB-A4XA	MALE	30	NA	573	Oligoastrocytoma	Supratentorial, Parietal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-A4XA-01A
+TCGA-DB-A4XB	MALE	38	NA	919	Astrocytoma	Supratentorial, Parietal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-A4XB-01A
+TCGA-DB-A4XC	MALE	26	NA	1421	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-DB-A4XC-01A
+TCGA-DB-A4XD	MALE	32	NA	1210	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Right		Mutant	p.R132C	Wildtype	NA	Train	TCGA-DB-A4XD-01A
+TCGA-DB-A4XE	FEMALE	27	NA	1139	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-A4XE-01A
+TCGA-DB-A4XF	FEMALE	41	NA	1021	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Seizures	Mutant	p.R132C	Wildtype	NA	Train	TCGA-DB-A4XF-01A
+TCGA-DB-A4XG	MALE	34	NA	2219	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Seizures	Wildtype	NA	Other	p.R172K	Train	TCGA-DB-A4XG-01A
+TCGA-DB-A4XH	FEMALE	53	NA	962	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-DB-A4XH-01A
+TCGA-DB-A64L	FEMALE	67	NA	736	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-A64L-01A
+TCGA-DB-A64O	MALE	59	NA	NA	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Left	Motor/Movement Changes	Wildtype	NA	Wildtype	NA	Validation	TCGA-DB-A64O-01A
+TCGA-DB-A64P	MALE	40	NA	916	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-DB-A64P-01A
+TCGA-DB-A64Q	FEMALE	31	NA	182	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-A64Q-01A
+TCGA-DB-A64R	FEMALE	24	NA	955	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-A64R-01A
+TCGA-DB-A64S	MALE	20	NA	835	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex			Mutant	p.R132C	Wildtype	NA	Train	TCGA-DB-A64S-01A
+TCGA-DB-A64U	FEMALE	38	NA	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right		Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DB-A64U-01A
+TCGA-DB-A64V	MALE	54	NA	889	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-A64V-01A
+TCGA-DB-A64W	FEMALE	65	NA	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-A64W-01A
+TCGA-DB-A64X	FEMALE	56	NA	563	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-A64X-01A
+TCGA-DB-A75K	FEMALE	55	NA	368	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DB-A75K-01A
+TCGA-DB-A75L	FEMALE	36	NA	342	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DB-A75L-01A
+TCGA-DB-A75M	MALE	47	NA	544	Astrocytoma	Supratentorial, Parietal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132C	Wildtype	NA	Validation	TCGA-DB-A75M-01A
+TCGA-DB-A75O	MALE	29	NA	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DB-A75O-01A
+TCGA-DB-A75P	FEMALE	25	NA	492	Astrocytoma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Right	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-DB-A75P-01A
+TCGA-DH-5140	FEMALE	38	607	NA	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Headaches	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-DH-5140-01A
+TCGA-DH-5141	MALE	32	NA	968	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Headaches	Wildtype	NA	Other	p.R172K	Train	TCGA-DH-5141-01A
+TCGA-DH-5142	MALE	29	NA	1943	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-DH-5142-01A
+TCGA-DH-5143	MALE	30	NA	1401	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DH-5143-01A
+TCGA-DH-5144	FEMALE	56	NA	748	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DH-5144-01A
+TCGA-DH-A669	MALE	70	919	NA	Oligodendroglioma	Supratentorial, Parietal Lobe	G3	Not listed in Medical Record	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DH-A669-02A
+TCGA-DH-A669	MALE	70	919	NA	Oligodendroglioma	Supratentorial, Parietal Lobe	G3	Not listed in Medical Record	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DH-A669-01A
+TCGA-DH-A66B	MALE	52	NA	1279	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DH-A66B-01A
+TCGA-DH-A66D	FEMALE	43	NA	846	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DH-A66D-01A
+TCGA-DH-A66F	MALE	49	NA	523	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DH-A66F-01A
+TCGA-DH-A66G	FEMALE	49	NA	523	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DH-A66G-01A
+TCGA-DH-A7UR	FEMALE	59	NA	1650	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Headaches	Wildtype	NA	Mutant	p.R172G	Train	TCGA-DH-A7UR-01A
+TCGA-DH-A7US	MALE	50	NA	706	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DH-A7US-01A
+TCGA-DH-A7UT	MALE	30	NA	407	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DH-A7UT-01A
+TCGA-DH-A7UU	MALE	43	NA	417	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Sensory Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DH-A7UU-01A
+TCGA-DH-A7UV	MALE	49	NA	566	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132G	Wildtype	NA	Train	TCGA-DH-A7UV-01A
+TCGA-DU-5847	FEMALE	34	NA	548	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-5847-01A
+TCGA-DU-5849	MALE	48	NA	443	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Seizures	Wildtype	NA	Other	p.R172K	Train	TCGA-DU-5849-01A
+TCGA-DU-5851	FEMALE	40	NA	531	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-5851-01A
+TCGA-DU-5852	FEMALE	61	205	NA	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	White Matter	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-5852-01A
+TCGA-DU-5853	MALE	29	NA	407	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DU-5853-01A
+TCGA-DU-5854	FEMALE	57	NA	257	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Motor/Movement Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-5854-01A
+TCGA-DU-5855	FEMALE	49	NA	207	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-5855-01A
+TCGA-DU-5870	FEMALE	34	NA	5546	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-5870-01A
+TCGA-DU-5870	FEMALE	34	NA	5546	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-5870-02A
+TCGA-DU-5871	FEMALE	37	NA	576	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Seizures	Mutant	p.R132G	Wildtype	NA	Train	TCGA-DU-5871-01A
+TCGA-DU-5872	FEMALE	43	NA	532	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-5872-01A
+TCGA-DU-5872	FEMALE	43	NA	532	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DU-5872-02A
+TCGA-DU-5872	FEMALE	43	NA	532	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Headaches	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-5872-01A
+TCGA-DU-5872	FEMALE	43	NA	532	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Headaches	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-DU-5872-02A
+TCGA-DU-5874	FEMALE	62	NA	461	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-5874-01A
+TCGA-DU-6392	FEMALE	35	NA	6423	Astrocytoma	Supratentorial, Parietal Lobe	G3	White Matter	Right	Seizures	Wildtype	NA	Wildtype	NA	Validation	TCGA-DU-6392-01A
+TCGA-DU-6393	MALE	66	1585	NA	Oligodendroglioma	Supratentorial, Occipital Lobe	G3	White Matter	Left		Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DU-6393-01A
+TCGA-DU-6394	MALE	53	682	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	White Matter	Midline		Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-6394-01A
+TCGA-DU-6395	MALE	31	1491	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-DU-6395-01A
+TCGA-DU-6396	FEMALE	31	2286	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-6396-01A
+TCGA-DU-6397	MALE	45	1401	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-6397-01A
+TCGA-DU-6397	MALE	45	1401	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-6397-02A
+TCGA-DU-6399	MALE	54	2000	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	White Matter	Right		Wildtype	NA	Wildtype	NA	Train	TCGA-DU-6399-01A
+TCGA-DU-6400	FEMALE	66	37	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-6400-01A
+TCGA-DU-6401	FEMALE	31	2660	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Headaches	Mutant	p.R132S	Wildtype	NA	Train	TCGA-DU-6401-01A
+TCGA-DU-6402	MALE	52	214	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-DU-6402-01A
+TCGA-DU-6403	FEMALE	60	354	NA	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Headaches	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-6403-01A
+TCGA-DU-6404	FEMALE	24	4068	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-6404-02B
+TCGA-DU-6404	FEMALE	24	4068	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-DU-6404-01A
+TCGA-DU-6404	FEMALE	24	4068	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-DU-6404-02A
+TCGA-DU-6405	FEMALE	51	605	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-6405-01A
+TCGA-DU-6406	FEMALE	59	512	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Motor/Movement Changes	Wildtype	NA	Wildtype	NA	Validation	TCGA-DU-6406-01A
+TCGA-DU-6407	FEMALE	35	2875	NA	Oligodendroglioma		G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-6407-01A
+TCGA-DU-6407	FEMALE	35	2875	NA	Oligodendroglioma		G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-6407-02A
+TCGA-DU-6407	FEMALE	35	2875	NA	Oligodendroglioma		G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DU-6407-02B
+TCGA-DU-6408	FEMALE	23	3470	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-6408-01A
+TCGA-DU-6410	MALE	56	NA	242	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Midline	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-6410-01A
+TCGA-DU-6542	MALE	25	NA	73	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Visual Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-DU-6542-01A
+TCGA-DU-7006	FEMALE	60	349	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-7006-01A
+TCGA-DU-7007	MALE	33	1915	NA	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-7007-01A
+TCGA-DU-7008	FEMALE	41	NA	4752	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-7008-01A
+TCGA-DU-7009	FEMALE	32	NA	4206	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Sensory Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-7009-01A
+TCGA-DU-7010	FEMALE	58	456	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-7010-01A
+TCGA-DU-7011	MALE	25	3200	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-7011-01A
+TCGA-DU-7012	FEMALE	74	199	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Mental Status Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-7012-01A
+TCGA-DU-7013	MALE	59	269	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	White Matter	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-7013-01A
+TCGA-DU-7014	MALE	59	3571	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Seizures	Unknown	NA	NA	NA	Train	TCGA-DU-7014-01A
+TCGA-DU-7015	FEMALE	41	NA	2761	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-7015-01A
+TCGA-DU-7018	FEMALE	57	933	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-7018-01A
+TCGA-DU-7019	MALE	39	NA	800	Oligoastrocytoma	Supratentorial, Temporal Lobe	Unknown	Cerebral Cortex	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-DU-7019-01A
+TCGA-DU-7290	FEMALE	45	315	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Right	Headaches	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-7290-01A
+TCGA-DU-7292	MALE	69	242	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-7292-01A
+TCGA-DU-7294	FEMALE	53	NA	2869	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right		Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DU-7294-01A
+TCGA-DU-7298	FEMALE	38	576	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-7298-01A
+TCGA-DU-7299	MALE	33	1339	NA	Astrocytoma	Supratentorial, Parietal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DU-7299-01A
+TCGA-DU-7300	FEMALE	53	1886	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-7300-01A
+TCGA-DU-7301	MALE	53	788	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-7301-01A
+TCGA-DU-7302	FEMALE	48	NA	1834	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-7302-01A
+TCGA-DU-7304	MALE	43	709	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132G	Wildtype	NA	Train	TCGA-DU-7304-01A
+TCGA-DU-7304	MALE	43	709	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132G	Wildtype	NA	Internal Test	TCGA-DU-7304-02A
+TCGA-DU-7306	MALE	67	NA	1277	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-DU-7306-01A
+TCGA-DU-7309	FEMALE	41	NA	84	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Wildtype	NA	Other	p.R172S	Validation	TCGA-DU-7309-01A
+TCGA-DU-8158	FEMALE	57	155	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3		Left	Mental Status Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-8158-01A
+TCGA-DU-8161	FEMALE	63	722	NA	Oligoastrocytoma	Supratentorial, Not Otherwise Specified	G3	Not listed in Medical Record	Left	Sensory Changes	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-DU-8161-01A
+TCGA-DU-8162	FEMALE	61	NA	NA	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Headaches	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-DU-8162-01A
+TCGA-DU-8163	MALE	29	NA	629	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DU-8163-01A
+TCGA-DU-8164	MALE	51	NA	651	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-8164-01A
+TCGA-DU-8165	FEMALE	60	NA	582	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Seizures	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-DU-8165-01A
+TCGA-DU-8166	FEMALE	29	NA	516	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-8166-01A
+TCGA-DU-8167	FEMALE	69	NA	471	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-DU-8167-01A
+TCGA-DU-8168	FEMALE	55	NA	431	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-DU-8168-01A
+TCGA-DU-A5TP	MALE	33	NA	1012	Astrocytoma	Supratentorial, Parietal Lobe	G3	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-A5TP-01A
+TCGA-DU-A5TR	MALE	51	NA	908	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132S	Wildtype	NA	Internal Test	TCGA-DU-A5TR-01A
+TCGA-DU-A5TS	MALE	42	NA	964	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-A5TS-01A
+TCGA-DU-A5TT	MALE	70	NA	743	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-A5TT-01A
+TCGA-DU-A5TU	FEMALE	62	NA	796	Astrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-A5TU-01A
+TCGA-DU-A5TW	FEMALE	33	NA	760	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-A5TW-01A
+TCGA-DU-A5TY	FEMALE	46	NA	NA	Astrocytoma	Supratentorial, Parietal Lobe	G3	Not listed in Medical Record	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-A5TY-01A
+TCGA-DU-A6S2	FEMALE	37	NA	777	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DU-A6S2-01A
+TCGA-DU-A6S3	MALE	60	NA	656	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-DU-A6S3-01A
+TCGA-DU-A6S6	FEMALE	35	NA	2893	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-A6S6-01A
+TCGA-DU-A6S7	FEMALE	27	NA	638	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132S	Wildtype	NA	Train	TCGA-DU-A6S7-01A
+TCGA-DU-A6S8	FEMALE	74	NA	678	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-A6S8-01A
+TCGA-DU-A76K	MALE	87	347	NA	Oligodendroglioma	Supratentorial, Parietal Lobe	G2	Not listed in Medical Record	Right	Headaches	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-A76K-01A
+TCGA-DU-A76L	MALE	54	814	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Headaches	Wildtype	NA	Wildtype	NA	Train	TCGA-DU-A76L-01A
+TCGA-DU-A76O	MALE	30	NA	522	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-A76O-01A
+TCGA-DU-A76R	MALE	51	648	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-A76R-01A
+TCGA-DU-A7T6	FEMALE	73	547	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-A7T6-01A
+TCGA-DU-A7T8	MALE	35	NA	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-DU-A7T8-01A
+TCGA-DU-A7TA	MALE	32	NA	2565	Oligodendroglioma	Supratentorial, Occipital Lobe	G2	Not listed in Medical Record	Right	Visual Changes	Wildtype	NA	Mutant	p.R172M	Train	TCGA-DU-A7TA-01A
+TCGA-DU-A7TB	MALE	56	NA	1567	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	Validation	TCGA-DU-A7TB-01A
+TCGA-DU-A7TC	MALE	32	NA	1137	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-DU-A7TC-01A
+TCGA-DU-A7TD	MALE	52	228	NA	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3		Right	Motor/Movement Changes	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-DU-A7TD-01A
+TCGA-DU-A7TG	MALE	40	1351	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-DU-A7TG-01A
+TCGA-DU-A7TI	MALE	32	1183	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Unknown	NA	NA	NA	Train	TCGA-DU-A7TI-01A
+TCGA-DU-A7TJ	MALE	55	NA	17	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	Validation	TCGA-DU-A7TJ-01A
+TCGA-E1-5302	MALE	41	1525	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-E1-5302-01A
+TCGA-E1-5303	MALE	38	2052	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-5303-01A
+TCGA-E1-5304	MALE	42	1251	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-E1-5304-01A
+TCGA-E1-5305	MALE	34	2433	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-5305-01A
+TCGA-E1-5307	FEMALE	62	1762	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-E1-5307-01A
+TCGA-E1-5311	MALE	31	4084	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-5311-01A
+TCGA-E1-5318	FEMALE	42	2379	2379	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Headaches	Wildtype	NA	Mutant	p.R172M	Train	TCGA-E1-5318-01A
+TCGA-E1-5319	FEMALE	48	2907	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Visual Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-5319-01A
+TCGA-E1-5322	FEMALE	38	3978	NA	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-5322-01A
+TCGA-E1-A7YD	MALE	57	435	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Headaches	Wildtype	NA	Wildtype	NA	Train	TCGA-E1-A7YD-01A
+TCGA-E1-A7YE	FEMALE	32	886	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-A7YE-01A
+TCGA-E1-A7YH	FEMALE	47	2835	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-A7YH-01A
+TCGA-E1-A7YI	FEMALE	33	111	NA	Astrocytoma	Supratentorial, Occipital Lobe	G3	Not listed in Medical Record	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-E1-A7YI-01A
+TCGA-E1-A7YJ	MALE	55	592	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Motor/Movement Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-E1-A7YJ-01A
+TCGA-E1-A7YK	MALE	52	378	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-A7YK-01A
+TCGA-E1-A7YL	MALE	46	492	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Headaches	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-E1-A7YL-01A
+TCGA-E1-A7YM	MALE	63	648	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Headaches	Wildtype	NA	Wildtype	NA	Train	TCGA-E1-A7YM-01A
+TCGA-E1-A7YN	FEMALE	63	727	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Visual Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-E1-A7YN-01A
+TCGA-E1-A7YO	MALE	45	2282	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-A7YO-01A
+TCGA-E1-A7YQ	FEMALE	58	1578	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	White Matter	Right	Headaches	Wildtype	NA	Wildtype	NA	Train	TCGA-E1-A7YQ-01A
+TCGA-E1-A7YS	MALE	71	466	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-A7YS-01A
+TCGA-E1-A7YU	MALE	42	23	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record		Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-A7YU-01A
+TCGA-E1-A7YV	FEMALE	26	987	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-A7YV-01A
+TCGA-E1-A7YW	MALE	28	1120	NA	Oligoastrocytoma	Supratentorial, Parietal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-A7YW-01A
+TCGA-E1-A7YY	FEMALE	27	4445	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-A7YY-01A
+TCGA-E1-A7Z2	FEMALE	58	398	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-E1-A7Z2-01A
+TCGA-E1-A7Z3	FEMALE	31	2235	NA	Astrocytoma	Supratentorial, Parietal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-A7Z3-01A
+TCGA-E1-A7Z4	MALE	35	4412	NA	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-A7Z4-01A
+TCGA-E1-A7Z6	FEMALE	41	984	NA	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-E1-A7Z6-01A
+TCGA-EZ-7264	FEMALE	47	NA	1201	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-EZ-7264-01A
+TCGA-F6-A8O3	MALE	34	NA	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record		Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-F6-A8O3-01A
+TCGA-F6-A8O4	MALE	44	NA	NA	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-F6-A8O4-01A
+TCGA-FG-5962	MALE	54	NA	1453	Oligodendroglioma	Supratentorial, Occipital Lobe	G3	White Matter	Left	Visual Changes	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-5962-01B
+TCGA-FG-5963	MALE	23	NA	547	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Seizures	Wildtype	NA	Wildtype	NA	External Test	TCGA-FG-5963-01A
+TCGA-FG-5963	MALE	23	NA	547	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Seizures	Wildtype	NA	Wildtype	NA	External Test	TCGA-FG-5963-02A
+TCGA-FG-5964	MALE	62	NA	1588	Oligodendroglioma	Supratentorial, Parietal Lobe	G2	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-5964-01A
+TCGA-FG-5965	FEMALE	39	NA	979	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-5965-02A
+TCGA-FG-5965	FEMALE	39	NA	979	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-5965-01B
+TCGA-FG-5965	FEMALE	39	NA	979	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-5965-02B
+TCGA-FG-6688	FEMALE	59	NA	571	Astrocytoma	Supratentorial, Parietal Lobe	G3	Not listed in Medical Record	Left	Seizures	Wildtype	NA	Wildtype	NA	External Test	TCGA-FG-6688-01A
+TCGA-FG-6689	MALE	30	NA	454	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-6689-01A
+TCGA-FG-6690	MALE	70	NA	1294	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-6690-01A
+TCGA-FG-6691	FEMALE	23	NA	1257	Astrocytoma	Supratentorial, Temporal Lobe	G2	White Matter	Right	Headaches	Mutant	p.R132S	Wildtype	NA	External Test	TCGA-FG-6691-01A
+TCGA-FG-6692	MALE	63	NA	413	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	External Test	TCGA-FG-6692-01A
+TCGA-FG-7634	MALE	28	NA	467	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-7634-01A
+TCGA-FG-7636	MALE	48	NA	544	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-7636-01A
+TCGA-FG-7637	MALE	49	NA	1219	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-7637-01A
+TCGA-FG-7638	FEMALE	31	NA	686	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-7638-01B
+TCGA-FG-7641	MALE	31	NA	627	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-7641-01B
+TCGA-FG-7643	FEMALE	49	NA	611	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Seizures	Wildtype	NA	Wildtype	NA	External Test	TCGA-FG-7643-01A
+TCGA-FG-8181	MALE	23	NA	862	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left		Unknown	NA	NA	NA	External Test	TCGA-FG-8181-01A
+TCGA-FG-8182	MALE	35	NA	416	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-8182-01A
+TCGA-FG-8185	MALE	37	NA	433	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Headaches	Mutant	p.R132C	Wildtype	NA	External Test	TCGA-FG-8185-01A
+TCGA-FG-8186	FEMALE	42	NA	487	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-8186-01A
+TCGA-FG-8187	MALE	31	NA	611	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right		Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-8187-01A
+TCGA-FG-8188	MALE	41	NA	455	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-8188-01A
+TCGA-FG-8189	FEMALE	33	NA	685	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Mutant	p.R172W	External Test	TCGA-FG-8189-01B
+TCGA-FG-8191	MALE	30	NA	992	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Sensory Changes	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-8191-01A
+TCGA-FG-A4MT	FEMALE	27	NA	1164	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A4MT-02A
+TCGA-FG-A4MT	FEMALE	27	NA	1164	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A4MT-01A
+TCGA-FG-A4MU	MALE	58	NA	326	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Headaches	Wildtype	NA	Wildtype	NA	External Test	TCGA-FG-A4MU-01B
+TCGA-FG-A4MW	MALE	63	NA	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	External Test	TCGA-FG-A4MW-01A
+TCGA-FG-A4MX	MALE	47	NA	569	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A4MX-01A
+TCGA-FG-A4MY	FEMALE	44	NA	721	Oligoastrocytoma	Supratentorial, Parietal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A4MY-01A
+TCGA-FG-A60J	FEMALE	47	NA	449	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A60J-01A
+TCGA-FG-A60K	FEMALE	34	NA	542	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A60K-01A
+TCGA-FG-A60L	FEMALE	34	NA	655	Astrocytoma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A60L-01A
+TCGA-FG-A6IZ	MALE	60	NA	457	Oligodendroglioma	Supratentorial, Not Otherwise Specified	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A6IZ-01A
+TCGA-FG-A6J1	FEMALE	44	NA	500	Oligodendroglioma	Supratentorial, Not Otherwise Specified	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A6J1-01A
+TCGA-FG-A6J3	FEMALE	52	NA	677	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Sensory Changes	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A6J3-01A
+TCGA-FG-A70Y	FEMALE	20	NA	868	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A70Y-01A
+TCGA-FG-A70Z	FEMALE	53	NA	328	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Headaches	Wildtype	NA	Wildtype	NA	External Test	TCGA-FG-A70Z-01A
+TCGA-FG-A710	FEMALE	50	NA	1115	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A710-01A
+TCGA-FG-A711	FEMALE	33	NA	1329	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A711-01A
+TCGA-FG-A713	FEMALE	74	NA	622	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A713-01A
+TCGA-FG-A87N	FEMALE	37	NA	567	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-FG-A87N-01A
+TCGA-FG-A87Q	FEMALE	61	NA	174	Astrocytoma	Supratentorial, Parietal Lobe	G3	White Matter	Right	Seizures	Wildtype	NA	Wildtype	NA	External Test	TCGA-FG-A87Q-01A
+TCGA-FN-7833	MALE	25	NA	837	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Midline	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-FN-7833-01A
+TCGA-HT-7467	MALE	54	NA	3	Oligodendroglioma	Supratentorial, Parietal Lobe	G2	White Matter	Right	Sensory Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7467-01A
+TCGA-HT-7468	MALE	30	NA	203	Oligodendroglioma	Supratentorial, Parietal Lobe	G3	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7468-01A
+TCGA-HT-7469	MALE	30	NA	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Motor/Movement Changes	Wildtype	NA	Wildtype	NA	Validation	TCGA-HT-7469-01A
+TCGA-HT-7470	MALE	37	NA	268	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	White Matter	Right	Headaches	Mutant	p.R132S	Wildtype	NA	Train	TCGA-HT-7470-01A
+TCGA-HT-7471	FEMALE	37	NA	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7471-01A
+TCGA-HT-7472	MALE	38	NA	1	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7472-01A
+TCGA-HT-7473	MALE	28	NA	503	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	White Matter	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7473-01A
+TCGA-HT-7474	MALE	52	NA	114	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7474-01A
+TCGA-HT-7475	MALE	67	NA	530	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-HT-7475-01A
+TCGA-HT-7476	MALE	26	NA	199	Astrocytoma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Left	Seizures	Wildtype	NA	Other	p.R172K	Train	TCGA-HT-7476-01A
+TCGA-HT-7477	MALE	62	NA	738	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-HT-7477-01B
+TCGA-HT-7478	MALE	36	NA	194	Astrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7478-01A
+TCGA-HT-7479	MALE	44	NA	1227	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Headaches	Mutant	p.R132C	Wildtype	NA	Internal Test	TCGA-HT-7479-01A
+TCGA-HT-7480	MALE	33	NA	2287	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7480-01A
+TCGA-HT-7481	MALE	39	NA	2918	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7481-01A
+TCGA-HT-7482	FEMALE	18	NA	3253	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132G	Wildtype	NA	Train	TCGA-HT-7482-01A
+TCGA-HT-7483	MALE	14	NA	5255	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Seizures	Mutant	p.R132G	Wildtype	NA	Train	TCGA-HT-7483-01A
+TCGA-HT-7485	MALE	42	NA	122	Astrocytoma	Supratentorial, Parietal Lobe	G2	White Matter	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-HT-7485-01A
+TCGA-HT-7601	FEMALE	30	NA	153	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7601-01A
+TCGA-HT-7602	MALE	21	NA	908	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-HT-7602-01A
+TCGA-HT-7603	MALE	29	NA	705	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter		Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7603-01A
+TCGA-HT-7604	MALE	50	NA	3725	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Headaches	Mutant	p.R132S	Wildtype	NA	Internal Test	TCGA-HT-7604-01A
+TCGA-HT-7605	MALE	38	NA	139	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-HT-7605-01A
+TCGA-HT-7606	FEMALE	30	NA	526	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7606-01A
+TCGA-HT-7607	FEMALE	61	96	NA	Astrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7607-01A
+TCGA-HT-7608	MALE	61	NA	671	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	White Matter	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-HT-7608-01A
+TCGA-HT-7609	MALE	34	NA	1399	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7609-01A
+TCGA-HT-7610	FEMALE	25	NA	1706	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7610-01A
+TCGA-HT-7611	MALE	36	NA	1752	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right		Mutant	p.R132G	Wildtype	NA	Train	TCGA-HT-7611-01A
+TCGA-HT-7616	MALE	75	7	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-HT-7616-01A
+TCGA-HT-7620	MALE	40	NA	434	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	White Matter	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-HT-7620-01A
+TCGA-HT-7676	MALE	26	NA	5	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7676-01A
+TCGA-HT-7677	MALE	53	NA	494	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	White Matter	Left	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7677-01A
+TCGA-HT-7680	FEMALE	32	NA	23	Astrocytoma	Posterior Fossa, Cerebellum	G2	White Matter	Midline	Headaches	Wildtype	NA	Wildtype	NA	Train	TCGA-HT-7680-01A
+TCGA-HT-7681	FEMALE	29	NA	1359	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right		Wildtype	NA	Other	p.R172K	Train	TCGA-HT-7681-01A
+TCGA-HT-7684	MALE	58	NA	184	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7684-01A
+TCGA-HT-7686	FEMALE	29	NA	1300	Astrocytoma	Supratentorial, Parietal Lobe	G3	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7686-01A
+TCGA-HT-7687	MALE	74	NA	3	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Visual Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7687-01A
+TCGA-HT-7688	MALE	59	NA	964	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	White Matter	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-HT-7688-01A
+TCGA-HT-7689	FEMALE	58	NA	455	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7689-01A
+TCGA-HT-7690	MALE	29	NA	3	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-HT-7690-01A
+TCGA-HT-7691	FEMALE	31	NA	3	Astrocytoma	Supratentorial, Not Otherwise Specified	G2	Not listed in Medical Record	Right	Headaches	Wildtype	NA	Wildtype	NA	Validation	TCGA-HT-7691-01A
+TCGA-HT-7692	MALE	43	NA	90	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2		Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7692-01A
+TCGA-HT-7693	FEMALE	51	NA	533	Oligodendroglioma	Supratentorial, Frontal Lobe	G2		Right	Seizures	Mutant	p.R132C	Wildtype	NA	Train	TCGA-HT-7693-01A
+TCGA-HT-7694	MALE	60	NA	210	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7694-01A
+TCGA-HT-7695	FEMALE	29	NA	442	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7695-01A
+TCGA-HT-7854	MALE	62	NA	1201	Astrocytoma	Supratentorial, Temporal Lobe	G2	White Matter	Left	Visual Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-HT-7854-01A
+TCGA-HT-7855	MALE	39	NA	585	Astrocytoma	Supratentorial, Parietal Lobe	G3	Cerebral Cortex	Left	Headaches	Mutant	p.R132C	Wildtype	NA	Train	TCGA-HT-7855-01A
+TCGA-HT-7856	MALE	35	NA	1189	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	White Matter	Left	Mental Status Changes	Wildtype	NA	Mutant	p.R172W	Train	TCGA-HT-7856-01A
+TCGA-HT-7857	FEMALE	24	NA	7	Astrocytoma	Supratentorial, Not Otherwise Specified	G3	Not listed in Medical Record	Left	Motor/Movement Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-HT-7857-01A
+TCGA-HT-7858	MALE	28	NA	1540	Astrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Headaches	Mutant	p.R132S	Wildtype	NA	Internal Test	TCGA-HT-7858-01A
+TCGA-HT-7860	FEMALE	60	NA	15	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-HT-7860-01A
+TCGA-HT-7873	MALE	29	NA	718	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-HT-7873-01B
+TCGA-HT-7874	FEMALE	41	NA	1130	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7874-01A
+TCGA-HT-7875	MALE	56	NA	10	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7875-01A
+TCGA-HT-7877	FEMALE	20	NA	4	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-HT-7877-01A
+TCGA-HT-7879	MALE	31	NA	112	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3		Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7879-01A
+TCGA-HT-7880	MALE	30	NA	162	Oligoastrocytoma	Supratentorial, Parietal Lobe	G2	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7880-01A
+TCGA-HT-7881	MALE	38	NA	1079	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7881-01A
+TCGA-HT-7882	MALE	66	NA	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-HT-7882-01A
+TCGA-HT-7884	FEMALE	44	NA	343	Astrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7884-01B
+TCGA-HT-7902	FEMALE	30	NA	956	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Visual Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-7902-01A
+TCGA-HT-8010	FEMALE	64	NA	50	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-8010-01A
+TCGA-HT-8011	MALE	55	NA	494	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-HT-8011-01A
+TCGA-HT-8012	FEMALE	30	NA	286	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-8012-01A
+TCGA-HT-8013	FEMALE	37	1933	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-HT-8013-01A
+TCGA-HT-8015	MALE	21	NA	NA	Astrocytoma	Supratentorial, Temporal Lobe	G2	Deep Gray (e.g.basal ganglia, thalamus)	Left		Wildtype	NA	Wildtype	NA	Train	TCGA-HT-8015-01B
+TCGA-HT-8018	FEMALE	40	NA	NA	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-8018-01A
+TCGA-HT-8019	FEMALE	34	NA	1004	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Seizures	Unknown	NA	NA	NA	Internal Test	TCGA-HT-8019-01A
+TCGA-HT-8104	FEMALE	51	NA	372	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Left	Motor/Movement Changes	Wildtype	NA	Wildtype	NA	Validation	TCGA-HT-8104-01A
+TCGA-HT-8105	MALE	54	NA	190	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-8105-01A
+TCGA-HT-8106	MALE	53	NA	3	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Midline	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-HT-8106-01A
+TCGA-HT-8107	MALE	62	NA	14	Oligodendroglioma	Supratentorial, Parietal Lobe	G2	Not listed in Medical Record	Left	Mental Status Changes	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-HT-8107-01A
+TCGA-HT-8108	FEMALE	26	NA	76	Oligodendroglioma	Supratentorial, Parietal Lobe	G2	White Matter	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-HT-8108-01A
+TCGA-HT-8109	MALE	64	NA	169	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-HT-8109-01A
+TCGA-HT-8110	MALE	57	NA	419	Astrocytoma	Supratentorial, Parietal Lobe	G3	White Matter	Right	Visual Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-HT-8110-01A
+TCGA-HT-8111	MALE	32	NA	7	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-8111-01A
+TCGA-HT-8113	FEMALE	49	NA	900	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Seizures	Wildtype	NA	Other	p.R172K	Train	TCGA-HT-8113-01A
+TCGA-HT-8114	MALE	36	NA	1040	Oligoastrocytoma	Supratentorial, Parietal Lobe	G3	White Matter	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-8114-01A
+TCGA-HT-8558	FEMALE	29	NA	418	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Seizures	Unknown	NA	NA	NA	Train	TCGA-HT-8558-01A
+TCGA-HT-8563	FEMALE	30	NA	860	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-HT-8563-01A
+TCGA-HT-8564	MALE	47	NA	478	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Mental Status Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-HT-8564-01A
+TCGA-HT-A4DS	FEMALE	55	NA	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-HT-A4DS-01A
+TCGA-HT-A4DV	FEMALE	51	NA	792	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-HT-A4DV-01A
+TCGA-HT-A5R5	FEMALE	33	NA	4	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-A5R5-01A
+TCGA-HT-A5R7	FEMALE	33	NA	615	Astrocytoma	Supratentorial, Parietal Lobe	G3	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-A5R7-01A
+TCGA-HT-A5R9	FEMALE	48	NA	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Mutant	p.R172G	Train	TCGA-HT-A5R9-01A
+TCGA-HT-A5RA	FEMALE	65	NA	832	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	Validation	TCGA-HT-A5RA-01A
+TCGA-HT-A5RB	MALE	24	NA	NA	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-A5RB-01A
+TCGA-HT-A5RC	FEMALE	70	162	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Mental Status Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-HT-A5RC-01A
+TCGA-HT-A614	MALE	47	NA	82	Oligoastrocytoma	Supratentorial, Not Otherwise Specified	G2	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-A614-01A
+TCGA-HT-A615	FEMALE	38	NA	515	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-A615-01A
+TCGA-HT-A616	FEMALE	36	NA	NA	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-A616-01A
+TCGA-HT-A617	MALE	47	NA	NA	Oligodendroglioma	Supratentorial, Not Otherwise Specified	G2	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-HT-A617-01A
+TCGA-HT-A618	FEMALE	37	NA	512	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record		Mental Status Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-HT-A618-01A
+TCGA-HT-A619	FEMALE	51	NA	651	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-A619-01A
+TCGA-HT-A61A	FEMALE	20	NA	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-HT-A61A-01A
+TCGA-HT-A61B	MALE	22	NA	533	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-HT-A61B-01A
+TCGA-HT-A61C	MALE	66	NA	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Motor/Movement Changes	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-HT-A61C-01A
+TCGA-HT-A74H	MALE	62	NA	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-HT-A74H-01A
+TCGA-HT-A74J	MALE	33	NA	NA	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-A74J-01A
+TCGA-HT-A74K	FEMALE	58	NA	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-HT-A74K-01A
+TCGA-HT-A74L	FEMALE	22	NA	336	Oligoastrocytoma	Supratentorial, Parietal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-HT-A74L-01A
+TCGA-HT-A74O	MALE	34	NA	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Headaches	Mutant	p.R132G	Wildtype	NA	Train	TCGA-HT-A74O-01A
+TCGA-HW-7486	MALE	37	NA	1721	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Right		Mutant	p.R132H	Wildtype	NA	Train	TCGA-HW-7486-01A
+TCGA-HW-7487	MALE	39	NA	1382	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Left		Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-HW-7487-01A
+TCGA-HW-7489	MALE	38	NA	253	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Right		Mutant	p.R132H	Wildtype	NA	Train	TCGA-HW-7489-01A
+TCGA-HW-7490	MALE	41	NA	1387	Astrocytoma	Supratentorial, Occipital Lobe	G2	White Matter	Left		Mutant	p.R132H	Wildtype	NA	Validation	TCGA-HW-7490-01A
+TCGA-HW-7491	MALE	35	NA	2078	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Right		Wildtype	NA	Other	p.R172K	Train	TCGA-HW-7491-01A
+TCGA-HW-7493	FEMALE	40	NA	2107	Astrocytoma	Supratentorial, Temporal Lobe	G2	White Matter	Right		Unknown	NA	NA	NA	Internal Test	TCGA-HW-7493-01A
+TCGA-HW-7495	FEMALE	45	NA	1078	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Right		Mutant	p.R132H	Wildtype	NA	Train	TCGA-HW-7495-01A
+TCGA-HW-8319	FEMALE	34	NA	660	Astrocytoma	Supratentorial, Frontal Lobe	G3		Left		Mutant	p.R132H	Wildtype	NA	Train	TCGA-HW-8319-01A
+TCGA-HW-8320	MALE	36	NA	1217	Astrocytoma	Supratentorial, Parietal Lobe	G3		Right		Mutant	p.R132H	Wildtype	NA	Train	TCGA-HW-8320-01A
+TCGA-HW-8321	MALE	31	NA	1294	Astrocytoma	Supratentorial, Frontal Lobe	G3		Left		Mutant	p.R132H	Wildtype	NA	Train	TCGA-HW-8321-01A
+TCGA-HW-8322	MALE	39	NA	758	Oligodendroglioma	Supratentorial, Frontal Lobe	G2		Left		Mutant	p.R132H	Wildtype	NA	Train	TCGA-HW-8322-01A
+TCGA-HW-A5KJ	MALE	68	NA	860	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	White Matter	Right		Mutant	p.R132H	Wildtype	NA	Train	TCGA-HW-A5KJ-01A
+TCGA-HW-A5KK	MALE	64	NA	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	White Matter	Right		Wildtype	NA	Wildtype	NA	Train	TCGA-HW-A5KK-01A
+TCGA-HW-A5KL	FEMALE	42	NA	878	Astrocytoma	Supratentorial, Temporal Lobe	G2	White Matter	Right		Mutant	p.R132H	Wildtype	NA	Train	TCGA-HW-A5KL-01A
+TCGA-HW-A5KM	MALE	35	NA	630	Astrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Left		Mutant	p.R132H	Wildtype	NA	Train	TCGA-HW-A5KM-01A
+TCGA-IK-7675	MALE	43	578	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-IK-7675-01A
+TCGA-IK-8125	MALE	62	NA	1301	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3		Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-IK-8125-01A
+TCGA-KT-A74X	MALE	26	NA	438	Oligoastrocytoma	Supratentorial, Parietal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-KT-A74X-01A
+TCGA-KT-A7W1	FEMALE	45	NA	438	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Seizures	Wildtype	NA	Wildtype	NA	External Test	TCGA-KT-A7W1-01A
+TCGA-P5-A5ET	MALE	27	NA	-10	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-P5-A5ET-01A
+TCGA-P5-A5EU	MALE	35	NA	0	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-P5-A5EU-01A
+TCGA-P5-A5EV	MALE	39	NA	7	Astrocytoma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-P5-A5EV-01A
+TCGA-P5-A5EW	FEMALE	20	NA	204	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-P5-A5EW-01A
+TCGA-P5-A5EX	FEMALE	41	NA	243	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-P5-A5EX-01A
+TCGA-P5-A5EY	MALE	21	NA	72	Astrocytoma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-P5-A5EY-01A
+TCGA-P5-A5EZ	MALE	39	NA	70	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132C	Wildtype	NA	Train	TCGA-P5-A5EZ-01A
+TCGA-P5-A5F0	MALE	33	NA	287	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-P5-A5F0-01A
+TCGA-P5-A5F1	MALE	30	NA	179	Astrocytoma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-P5-A5F1-01A
+TCGA-P5-A5F2	FEMALE	36	NA	242	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-P5-A5F2-01A
+TCGA-P5-A5F4	FEMALE	35	NA	231	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132C	Wildtype	NA	Internal Test	TCGA-P5-A5F4-01A
+TCGA-P5-A5F6	MALE	26	NA	39	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Headaches	Wildtype	NA	Wildtype	NA	Train	TCGA-P5-A5F6-01A
+TCGA-P5-A72U	FEMALE	71	NA	7	Oligodendroglioma	Supratentorial, Parietal Lobe	G3		Right		Wildtype	NA	Other	p.V217delinsEGM	Validation	TCGA-P5-A72U-01A
+TCGA-P5-A72W	MALE	35	NA	317	Astrocytoma	Supratentorial, Frontal Lobe	G3		Left		Mutant	p.R132H	Wildtype	NA	Validation	TCGA-P5-A72W-01A
+TCGA-P5-A72X	MALE	21	NA	403	Astrocytoma	Supratentorial, Temporal Lobe	G3		Left		Mutant	p.R132H	Wildtype	NA	Train	TCGA-P5-A72X-01A
+TCGA-P5-A72Z	FEMALE	64	NA	354	Oligodendroglioma	Supratentorial, Temporal Lobe	G3		Left		Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-P5-A72Z-01A
+TCGA-P5-A730	MALE	22	NA	333	Oligoastrocytoma	Supratentorial, Occipital Lobe	G3		Right		Wildtype	NA	Other	p.R172K	Train	TCGA-P5-A730-01A
+TCGA-P5-A731	FEMALE	59	NA	274	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2		Right		Mutant	p.R132H	Wildtype	NA	Validation	TCGA-P5-A731-01A
+TCGA-P5-A733	FEMALE	52	NA	414	Astrocytoma	Supratentorial, Frontal Lobe	G2		Left		Mutant	p.R132H	Wildtype	NA	Train	TCGA-P5-A733-01A
+TCGA-P5-A735	FEMALE	38	NA	292	Astrocytoma	Supratentorial, Temporal Lobe	G2		Left		Mutant	p.R132H	Wildtype	NA	Train	TCGA-P5-A735-01A
+TCGA-P5-A736	FEMALE	44	NA	230	Astrocytoma	Supratentorial, Parietal Lobe	G3		Right		Mutant	p.R132H	Wildtype	NA	Train	TCGA-P5-A736-01A
+TCGA-P5-A737	MALE	47	NA	372	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2		Right		Mutant	p.R132H	Wildtype	NA	Train	TCGA-P5-A737-01A
+TCGA-P5-A77W	FEMALE	37	NA	584	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3		Left		Mutant	p.R132H	Wildtype	NA	Train	TCGA-P5-A77W-01A
+TCGA-P5-A77X	FEMALE	55	NA	105	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2		Right		Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-P5-A77X-01A
+TCGA-P5-A780	FEMALE	44	NA	72	Astrocytoma	Supratentorial, Temporal Lobe	G3		Right		Mutant	p.R132H	Wildtype	NA	Train	TCGA-P5-A780-01A
+TCGA-P5-A781	FEMALE	34	NA	134	Astrocytoma	Supratentorial, Temporal Lobe	G3		Right		Mutant	p.R132H	Wildtype	NA	Train	TCGA-P5-A781-01A
+TCGA-QH-A65R	FEMALE	38	NA	461	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	White Matter	Left		Mutant	p.R132H	Wildtype	NA	Validation	TCGA-QH-A65R-01A
+TCGA-QH-A65S	FEMALE	32	NA	77	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-QH-A65S-01A
+TCGA-QH-A65V	FEMALE	43	NA	384	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-QH-A65V-01A
+TCGA-QH-A65X	FEMALE	28	NA	482	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Seizures	Wildtype	NA	Other	p.R172K	Train	TCGA-QH-A65X-01A
+TCGA-QH-A65Z	MALE	54	NA	427	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-QH-A65Z-01A
+TCGA-QH-A6CS	MALE	41	NA	588	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Seizures	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-QH-A6CS-01A
+TCGA-QH-A6CU	FEMALE	52	NA	451	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-QH-A6CU-01A
+TCGA-QH-A6CV	MALE	51	NA	442	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Headaches	Wildtype	NA	Wildtype	NA	Train	TCGA-QH-A6CV-01A
+TCGA-QH-A6CW	MALE	43	NA	414	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-QH-A6CW-01A
+TCGA-QH-A6CX	MALE	66	NA	NA	Astrocytoma	Supratentorial, Temporal Lobe	G2	White Matter	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-QH-A6CX-01A
+TCGA-QH-A6CY	MALE	38	NA	408	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-QH-A6CY-01A
+TCGA-QH-A6CZ	MALE	38	NA	279	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-QH-A6CZ-01A
+TCGA-QH-A6X3	MALE	27	NA	313	Oligoastrocytoma	Supratentorial, Parietal Lobe	G2	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-QH-A6X3-01A
+TCGA-QH-A6X4	MALE	47	NA	442	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Sensory Changes	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-QH-A6X4-01A
+TCGA-QH-A6X5	FEMALE	58	NA	497	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-QH-A6X5-01A
+TCGA-QH-A6X8	FEMALE	56	NA	509	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	White Matter	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-QH-A6X8-01A
+TCGA-QH-A6X9	FEMALE	73	NA	58	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-QH-A6X9-01A
+TCGA-QH-A6XA	FEMALE	23	NA	502	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Left		Mutant	p.R132H	Wildtype	NA	Train	TCGA-QH-A6XA-01A
+TCGA-QH-A6XC	MALE	48	NA	508	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-QH-A6XC-01A
+TCGA-QH-A86X	MALE	33	NA	337	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-QH-A86X-01A
+TCGA-QH-A870	FEMALE	38	NA	395	Oligoastrocytoma	Supratentorial, Occipital Lobe	G3	White Matter	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-QH-A870-01A
+TCGA-R8-A6MK	MALE	40	NA	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G2		Right		Mutant	p.R132H	Wildtype	NA	Validation	TCGA-R8-A6MK-01A
+TCGA-R8-A6ML	MALE	52	NA	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3		Left		Mutant	p.R132H	Wildtype	NA	Train	TCGA-R8-A6ML-01A
+TCGA-R8-A6MO	FEMALE	53	NA	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G2		Right		Mutant	p.R132H	Wildtype	NA	Train	TCGA-R8-A6MO-01A
+TCGA-R8-A6YH	Unknown	NA	NA	NA	Unknown	NA	Unknown	NA	NA	NA	Mutant	p.R132H	Wildtype	NA	Train	TCGA-R8-A6YH-01A
+TCGA-R8-A73M	FEMALE	48	NA	NA	Oligodendroglioma	Supratentorial, Parietal Lobe	G2		Left		Mutant	p.R132H	Wildtype	NA	Train	TCGA-R8-A73M-01A
+TCGA-RY-A83X	FEMALE	46	NA	939	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-RY-A83X-01A
+TCGA-RY-A83Y	MALE	45	NA	NA	Oligodendroglioma	Supratentorial, Parietal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-RY-A83Y-01A
+TCGA-RY-A83Z	FEMALE	54	NA	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-RY-A83Z-01A
+TCGA-RY-A840	MALE	47	NA	854	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-RY-A840-01A
+TCGA-RY-A843	MALE	30	NA	63	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-RY-A843-01A
+TCGA-RY-A845	FEMALE	40	NA	596	Oligoastrocytoma	Supratentorial, Parietal Lobe	G2	Cerebral Cortex	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-RY-A845-01A
+TCGA-RY-A847	MALE	45	NA	933	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right		Mutant	p.R132H	Wildtype	NA	Train	TCGA-RY-A847-01A
+TCGA-S9-A6TS	FEMALE	48	1891	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right		Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6TS-01A
+TCGA-S9-A6TU	MALE	38	NA	2650	Astrocytoma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Left	Sensory Changes	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-S9-A6TU-01A
+TCGA-S9-A6TV	MALE	50	NA	571	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6TV-01A
+TCGA-S9-A6TW	MALE	40	NA	1250	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6TW-01A
+TCGA-S9-A6TX	MALE	46	NA	1245	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6TX-01A
+TCGA-S9-A6TY	MALE	50	NA	1076	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Left	Seizures	Wildtype	NA	Other	p.R172K	Train	TCGA-S9-A6TY-01A
+TCGA-S9-A6TZ	FEMALE	39	NA	1120	Astrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6TZ-01A
+TCGA-S9-A6U0	MALE	46	NA	698	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Right	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-S9-A6U0-01A
+TCGA-S9-A6U1	FEMALE	22	NA	785	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Sensory Changes	Mutant	p.R132C	Wildtype	NA	Internal Test	TCGA-S9-A6U1-01A
+TCGA-S9-A6U2	FEMALE	48	NA	908	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-S9-A6U2-01A
+TCGA-S9-A6U5	MALE	33	NA	992	Astrocytoma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6U5-01A
+TCGA-S9-A6U6	MALE	28	NA	1069	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left		Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6U6-01A
+TCGA-S9-A6U8	MALE	24	NA	NA	Astrocytoma	Supratentorial, Temporal Lobe	G2	White Matter	Left	Seizures	Mutant	p.R132C	Wildtype	NA	Train	TCGA-S9-A6U8-01A
+TCGA-S9-A6U9	MALE	36	NA	2918	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Seizures	Mutant	p.R132C	Wildtype	NA	Train	TCGA-S9-A6U9-01A
+TCGA-S9-A6UA	MALE	66	178	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Deep Gray (e.g.basal ganglia, thalamus)	Right	Mental Status Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-S9-A6UA-01A
+TCGA-S9-A6UB	MALE	52	NA	3761	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right		Mutant	p.R132H	Wildtype	NA	Validation	TCGA-S9-A6UB-01A
+TCGA-S9-A6WD	MALE	58	NA	2289	Oligodendroglioma	Supratentorial, Parietal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6WD-01A
+TCGA-S9-A6WE	MALE	34	NA	4113	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Right	Sensory Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6WE-01A
+TCGA-S9-A6WG	MALE	31	NA	2602	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-S9-A6WG-01A
+TCGA-S9-A6WH	FEMALE	73	NA	1173	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6WH-01A
+TCGA-S9-A6WI	FEMALE	56	NA	2585	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Right	Headaches	Mutant	p.R132C	Wildtype	NA	Validation	TCGA-S9-A6WI-01A
+TCGA-S9-A6WL	MALE	52	NA	946	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6WL-01A
+TCGA-S9-A6WM	FEMALE	59	NA	604	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Headaches	Wildtype	NA	Wildtype	NA	Train	TCGA-S9-A6WM-01A
+TCGA-S9-A6WN	FEMALE	38	NA	805	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6WN-01A
+TCGA-S9-A6WO	MALE	29	NA	566	Astrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6WO-01A
+TCGA-S9-A6WP	MALE	42	NA	567	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6WP-01A
+TCGA-S9-A6WQ	FEMALE	57	NA	428	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A6WQ-01A
+TCGA-S9-A7IQ	FEMALE	45	NA	1099	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Sensory Changes	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-S9-A7IQ-01A
+TCGA-S9-A7IS	FEMALE	33	241	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A7IS-01A
+TCGA-S9-A7IX	MALE	57	NA	679	Astrocytoma	Supratentorial, Temporal Lobe	G3	White Matter	Right	Motor/Movement Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-S9-A7IX-01A
+TCGA-S9-A7IY	MALE	39	NA	715	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A7IY-01A
+TCGA-S9-A7IZ	FEMALE	48	NA	608	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-S9-A7IZ-01A
+TCGA-S9-A7J0	FEMALE	30	NA	609	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Right	Seizures	Mutant	p.R132S	Wildtype	NA	Train	TCGA-S9-A7J0-01A
+TCGA-S9-A7J1	MALE	43	NA	249	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A7J1-01A
+TCGA-S9-A7J2	MALE	25	NA	62	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-S9-A7J2-01A
+TCGA-S9-A7J3	FEMALE	52	NA	629	Oligodendroglioma	Supratentorial, Parietal Lobe	G3	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A7J3-01A
+TCGA-S9-A7QW	FEMALE	54	NA	458	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left		Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A7QW-01A
+TCGA-S9-A7QX	FEMALE	36	NA	564	Astrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Right	Sensory Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A7QX-01A
+TCGA-S9-A7QY	FEMALE	35	NA	863	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Seizures	Wildtype	NA	Other	p.R172K	Train	TCGA-S9-A7QY-01A
+TCGA-S9-A7QZ	MALE	41	NA	826	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A7QZ-01A
+TCGA-S9-A7R1	MALE	35	NA	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Midline	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A7R1-01A
+TCGA-S9-A7R2	MALE	69	316	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	White Matter	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-S9-A7R2-01A
+TCGA-S9-A7R3	FEMALE	28	NA	3013	Astrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-S9-A7R3-01A
+TCGA-S9-A7R4	MALE	46	NA	914	Astrocytoma	Supratentorial, Frontal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A7R4-01A
+TCGA-S9-A7R7	MALE	27	NA	3000	Astrocytoma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A7R7-01A
+TCGA-S9-A7R8	FEMALE	44	961	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A7R8-01A
+TCGA-S9-A89V	MALE	70	NA	569	Astrocytoma	Posterior Fossa, Cerebellum	G3	Cerebral Cortex	Right	Motor/Movement Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-S9-A89V-01A
+TCGA-S9-A89Z	MALE	40	NA	623	Astrocytoma	Supratentorial, Frontal Lobe	G3	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-S9-A89Z-01A
+TCGA-TM-A7C3	FEMALE	43	NA	1504	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-TM-A7C3-01A
+TCGA-TM-A7C4	FEMALE	39	NA	1470	Astrocytoma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-TM-A7C4-01A
+TCGA-TM-A7C5	MALE	30	NA	1500	Oligoastrocytoma	Supratentorial, Parietal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-TM-A7C5-01A
+TCGA-TM-A7CA	MALE	44	NA	1058	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-TM-A7CA-01A
+TCGA-TM-A7CF	FEMALE	41	NA	1989	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-TM-A7CF-02A
+TCGA-TM-A7CF	FEMALE	41	NA	1989	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-TM-A7CF-01A
+TCGA-TM-A84B	MALE	40	NA	NA	Astrocytoma	Supratentorial, Parietal Lobe	G3	Not listed in Medical Record	Left	Seizures	Wildtype	NA	Wildtype	NA	Train	TCGA-TM-A84B-01A
+TCGA-TM-A84C	MALE	32	NA	NA	Astrocytoma	Posterior Fossa, Brain Stem	G2	Not listed in Medical Record	Midline	Visual Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-TM-A84C-01A
+TCGA-TM-A84F	MALE	48	NA	1796	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Visual Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-TM-A84F-01A
+TCGA-TM-A84G	FEMALE	54	NA	1236	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-TM-A84G-01A
+TCGA-TM-A84H	FEMALE	44	NA	926	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-TM-A84H-01A
+TCGA-TM-A84I	MALE	30	NA	854	Astrocytoma	Supratentorial, Parietal Lobe	G3	Not listed in Medical Record	Left	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-TM-A84I-01A
+TCGA-TM-A84J	MALE	63	NA	735	Oligodendroglioma	Supratentorial, Occipital Lobe	G3	Not listed in Medical Record	Left	Visual Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-TM-A84J-01A
+TCGA-TM-A84L	MALE	31	1242	NA	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-TM-A84L-01A
+TCGA-TM-A84M	MALE	40	NA	754	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-TM-A84M-01A
+TCGA-TM-A84O	FEMALE	61	1011	NA	Oligodendroglioma	Supratentorial, Not Otherwise Specified	G3	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-TM-A84O-01A
+TCGA-TM-A84Q	MALE	31	NA	772	Astrocytoma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Internal Test	TCGA-TM-A84Q-01A
+TCGA-TM-A84R	MALE	46	NA	566	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Wildtype	NA	Mutant	p.R172M	Internal Test	TCGA-TM-A84R-01A
+TCGA-TM-A84S	MALE	36	NA	454	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-TM-A84S-01A
+TCGA-TM-A84T	MALE	19	NA	724	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-TM-A84T-01A
+TCGA-TQ-A7RF	FEMALE	27	NA	650	Oligodendroglioma	Supratentorial, Temporal Lobe	G3	White Matter	Right	Headaches	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A7RF-01A
+TCGA-TQ-A7RG	MALE	36	NA	599	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A7RG-01A
+TCGA-TQ-A7RH	MALE	39	NA	486	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	White Matter	Right	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A7RH-01A
+TCGA-TQ-A7RI	FEMALE	37	NA	62	Oligodendroglioma	Supratentorial, Parietal Lobe	G2	White Matter	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A7RI-01A
+TCGA-TQ-A7RJ	FEMALE	25	NA	1229	Oligoastrocytoma	Supratentorial, Parietal Lobe	G2	White Matter	Left	Sensory Changes	Mutant	p.R132G	Wildtype	NA	External Test	TCGA-TQ-A7RJ-01A
+TCGA-TQ-A7RK	MALE	29	NA	1341	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Mental Status Changes	Mutant	p.R132G	Wildtype	NA	External Test	TCGA-TQ-A7RK-02A
+TCGA-TQ-A7RK	MALE	29	NA	1341	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Mental Status Changes	Mutant	p.R132G	Wildtype	NA	External Test	TCGA-TQ-A7RK-01A
+TCGA-TQ-A7RK	MALE	29	NA	1341	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	White Matter	Left	Mental Status Changes	Mutant	p.R132G	Wildtype	NA	External Test	TCGA-TQ-A7RK-02B
+TCGA-TQ-A7RM	FEMALE	41	NA	1116	Oligoastrocytoma	Supratentorial, Temporal Lobe	G3	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A7RM-01A
+TCGA-TQ-A7RN	MALE	32	NA	1026	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Left	Headaches	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A7RN-01A
+TCGA-TQ-A7RO	MALE	29	NA	949	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Left	Seizures	Wildtype	NA	Other	p.R172K	External Test	TCGA-TQ-A7RO-01A
+TCGA-TQ-A7RP	MALE	66	NA	914	Oligoastrocytoma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Left	Seizures	Wildtype	NA	Wildtype	NA	External Test	TCGA-TQ-A7RP-01A
+TCGA-TQ-A7RQ	FEMALE	38	NA	795	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A7RQ-01A
+TCGA-TQ-A7RR	MALE	38	NA	787	Oligoastrocytoma	Supratentorial, Parietal Lobe	G2	Cerebral Cortex	Right	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A7RR-01A
+TCGA-TQ-A7RS	FEMALE	25	NA	-1	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Cerebral Cortex	Left	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A7RS-01A
+TCGA-TQ-A7RU	MALE	51	NA	1032	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A7RU-01A
+TCGA-TQ-A7RV	MALE	27	NA	1868	Astrocytoma	Supratentorial, Temporal Lobe	G2	White Matter	Left	Sensory Changes	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A7RV-02A
+TCGA-TQ-A7RV	MALE	27	NA	1868	Astrocytoma	Supratentorial, Temporal Lobe	G2	White Matter	Left	Sensory Changes	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A7RV-01A
+TCGA-TQ-A7RW	MALE	32	821	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Cerebral Cortex	Left	Seizures	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A7RW-01A
+TCGA-TQ-A8XE	FEMALE	42	954	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	White Matter	Left	Headaches	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A8XE-02A
+TCGA-TQ-A8XE	FEMALE	42	954	NA	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	White Matter	Left	Headaches	Mutant	p.R132H	Wildtype	NA	External Test	TCGA-TQ-A8XE-01A
+TCGA-VM-A8C8	FEMALE	50	NA	1397	Oligodendroglioma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-VM-A8C8-01A
+TCGA-VM-A8C9	FEMALE	37	NA	1314	Astrocytoma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Left	Seizures	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-VM-A8C9-01A
+TCGA-VM-A8CA	MALE	54	NA	411	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Mental Status Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-VM-A8CA-01A
+TCGA-VM-A8CB	MALE	33	NA	3	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-VM-A8CB-01A
+TCGA-VM-A8CD	MALE	58	240	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-VM-A8CD-01A
+TCGA-VM-A8CE	MALE	25	NA	1191	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-VM-A8CE-01A
+TCGA-VM-A8CF	FEMALE	44	NA	609	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-VM-A8CF-01A
+TCGA-VM-A8CH	FEMALE	24	NA	714	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132C	Wildtype	NA	Internal Test	TCGA-VM-A8CH-01A
+TCGA-VV-A829	MALE	44	NA	1127	Oligoastrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-VV-A829-01A
+TCGA-VV-A86M	FEMALE	36	NA	487	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Sensory Changes	Mutant	p.R132H	Wildtype	NA	Train	TCGA-VV-A86M-01A
+TCGA-VW-A7QS	FEMALE	35	NA	NA	Oligodendroglioma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Right	Headaches	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-VW-A7QS-01A
+TCGA-VW-A8FI	MALE	66	245	NA	Astrocytoma	Supratentorial, Temporal Lobe	G3	White Matter	Left	Mental Status Changes	Wildtype	NA	Wildtype	NA	Train	TCGA-VW-A8FI-01A
+TCGA-W9-A837	MALE	47	NA	1553	Oligodendroglioma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132H	Wildtype	NA	Train	TCGA-W9-A837-01A
+TCGA-WH-A86K	MALE	65	NA	405	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Motor/Movement Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-WH-A86K-01A
+TCGA-WY-A858	FEMALE	32	NA	NA	Astrocytoma	Supratentorial, Frontal Lobe	G3	Not listed in Medical Record	Left	Headaches	Mutant	p.R132H	Wildtype	NA	Train	TCGA-WY-A858-01A
+TCGA-WY-A859	FEMALE	34	NA	NA	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Left	Seizures	Mutant	p.R132S	Wildtype	NA	Train	TCGA-WY-A859-01A
+TCGA-WY-A85A	MALE	20	NA	NA	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Seizures	Wildtype	NA	Wildtype	NA	Internal Test	TCGA-WY-A85A-01A
+TCGA-WY-A85B	MALE	24	NA	1393	Astrocytoma	Supratentorial, Temporal Lobe	G2	Not listed in Medical Record	Right	Seizures	Mutant	p.R132G	Wildtype	NA	Train	TCGA-WY-A85B-01A
+TCGA-WY-A85C	MALE	36	NA	1426	Astrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Headaches	Mutant	p.R132G	Wildtype	NA	Train	TCGA-WY-A85C-01A
+TCGA-WY-A85D	MALE	60	NA	NA	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2	Not listed in Medical Record	Right	Sensory Changes	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-WY-A85D-01A
+TCGA-WY-A85E	FEMALE	48	NA	633	Oligoastrocytoma	Supratentorial, Frontal Lobe	G2		Left	Seizures	Mutant	p.R132H	Wildtype	NA	Validation	TCGA-WY-A85E-01A
